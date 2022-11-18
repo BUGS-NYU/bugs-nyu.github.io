@@ -3,7 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "description": "bugs-website",
-  "author": "David Mo",
   "keywords": [
     "gatsby"
   ],
@@ -19,12 +18,10 @@
     "gatsby": "^5.0.0",
     "gatsby-plugin-image": "^3.0.0",
     "gatsby-plugin-manifest": "^5.0.0",
-    "gatsby-plugin-postcss": "^6.0.0",
     "gatsby-plugin-sharp": "^5.0.0",
     "gatsby-plugin-sitemap": "^6.0.0",
     "gatsby-source-filesystem": "^5.0.0",
     "gatsby-transformer-sharp": "^5.0.0",
-    "postcss": "^8.4.19",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
@@ -32,6 +29,10 @@
     "@types/node": "^18.11.9",
     "@types/react": "^18.0.25",
     "@types/react-dom": "^18.0.8",
+    "autoprefixer": "^10.4.13",
+    "gatsby-plugin-postcss": "^6.0.0",
+    "postcss": "^8.4.19",
+    "tailwindcss": "^3.2.4",
     "typescript": "^4.8.4"
   }
 }
