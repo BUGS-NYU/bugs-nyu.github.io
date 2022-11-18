@@ -17,9 +17,11 @@ const NavBar = React.forwardRef<NavBarElement, NavBarProps>(
             <Link to="/projects">Projects</Link>
             <Link to="/events">Events</Link>
           </div>
-          <Button variant="primary" className="px-6">
-            Join
-          </Button>
+          <a href="https://discord.gg/75jgtXy7rz">
+            <Button variant="primary" className="px-6">
+              Join
+            </Button>
+          </a>
         </div>
       </header>
     );

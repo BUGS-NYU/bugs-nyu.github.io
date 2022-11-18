@@ -1,5 +1,5 @@
 import * as React from "react";
-import type { HeadFC, PageProps } from "gatsby";
+import { HeadFC, Link, PageProps } from "gatsby";
 import Button from "../components/Button";
 import NavBar from "../components/NavBar";
 import BugsLogo from "../svgs/bugs.svg";
@@ -19,8 +19,12 @@ const IndexPage: React.FC<PageProps> = () => {
               work on projects together.
             </p>
             <div className="mt-6 flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
-              <Button variant="primary">Join the Club</Button>
-              <Button>Learn More</Button>
+              <a href="https://discord.gg/75jgtXy7rz">
+                <Button variant="primary">Join the Club</Button>
+              </a>
+              <Link to="/about">
+                <Button>Learn More</Button>
+              </Link>
             </div>
           </div>
           <div className="hidden md:block">
