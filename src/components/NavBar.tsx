@@ -14,7 +14,6 @@ const NavBar = React.forwardRef<NavBarElement, NavBarProps>(
           <Link to="/">BUGS</Link>
           <div className="flex flex-row space-x-8">
             <Link to="/about">About Us</Link>
-            <Link to="/team">Team</Link>
             <Link to="/projects">Projects</Link>
             <Link to="/events">Events</Link>
           </div>
