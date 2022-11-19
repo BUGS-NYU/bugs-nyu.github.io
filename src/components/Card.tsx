@@ -28,7 +28,10 @@ const classes = {
 };
 
 const Card = React.forwardRef<CardElement, CardProps>(
-  ({ children, className, size = 'normal', radius = 'normal', shadow = 'none', ...restProps }) => {
+  (
+    { children, className, size = 'normal', radius = 'normal', shadow = 'none', ...restProps },
+    forwardedRef,
+  ) => {
     return (
       <div
         className={classNames(
@@ -39,6 +42,7 @@ const Card = React.forwardRef<CardElement, CardProps>(
           className,
         )}
         {...restProps}
+        ref={forwardedRef}
       >
         {children}
       </div>

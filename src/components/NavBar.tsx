@@ -6,24 +6,26 @@ import Button from './Button';
 type NavBarElement = React.ElementRef<'header'>;
 type NavBarProps = React.ComponentPropsWithoutRef<'header'>;
 
-const NavBar = React.forwardRef<NavBarElement, NavBarProps>(({ className, ...restProps }) => {
-  return (
-    <header className={className} {...restProps}>
-      <div className='mx-auto max-w-5xl h-24 px-8 flex flex-row items-center justify-between'>
-        <Link to='/'>BUGS</Link>
-        <div className='flex flex-row space-x-8'>
-          <Link to='/about'>About Us</Link>
-          <Link to='/projects'>Projects</Link>
-          <Link to='/events'>Events</Link>
+const NavBar = React.forwardRef<NavBarElement, NavBarProps>(
+  ({ className, ...restProps }, forwardedRef) => {
+    return (
+      <header className={className} {...restProps} ref={forwardedRef}>
+        <div className='mx-auto max-w-5xl h-24 px-8 flex flex-row items-center justify-between'>
+          <Link to='/'>BUGS</Link>
+          <div className='flex flex-row space-x-12'>
+            <Link to='/about'>About Us</Link>
+            <Link to='/projects'>Projects</Link>
+            <Link to='/events'>Events</Link>
+          </div>
+          <a href='https://discord.gg/75jgtXy7rz'>
+            <Button variant='primary' className='px-6'>
+              Join
+            </Button>
+          </a>
         </div>
-        <a href='https://discord.gg/75jgtXy7rz'>
-          <Button variant='primary' className='px-6'>
-            Join
-          </Button>
-        </a>
-      </div>
-    </header>
-  );
-});
+      </header>
+    );
+  },
+);
 
 export default NavBar;
