@@ -1,9 +1,9 @@
 import type { GatsbyConfig } from 'gatsby';
 
 const config: GatsbyConfig = {
-  pathPrefix: '/bugs-website',
+  pathPrefix: '/',
   siteMetadata: {
-    title: 'bugs-website',
+    title: 'bugs-nyu.github.io',
     siteUrl: 'https://www.yourdomain.tld',
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
