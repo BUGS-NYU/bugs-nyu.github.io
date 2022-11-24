@@ -1,8 +1,8 @@
 {
-  "name": "bugs-website",
+  "name": "bugs-nyu.github.io",
   "version": "1.0.0",
   "private": true,
-  "description": "bugs-website",
+  "description": "bugs website",
   "keywords": [
     "gatsby"
   ],
