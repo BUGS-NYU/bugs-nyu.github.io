@@ -4,6 +4,7 @@ import Button from '../components/Button';
 import NavBar from '../components/NavBar';
 import BugsLogo from '../svgs/bugs.svg';
 import Card from '../components/Card';
+import Footer from '../components/Footer';
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -58,6 +59,7 @@ const IndexPage: React.FC<PageProps> = () => {
           </div>
         </div>
       </main>
+      <Footer />
     </div>
   );
 };
