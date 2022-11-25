@@ -8,8 +8,8 @@ import Card from '../components/Card';
 const IndexPage: React.FC<PageProps> = () => (
   <Layout>
     <div className='flex space-x-32 items-center'>
-      <div className='mt-24'>
-        <h1 className='text-8xl font-bold'>BUGS @ NYU</h1>
+      <div className='mt-8 lg:mt-24'>
+        <h1 className='text-5xl lg:text-8xl font-bold'>BUGS @ NYU</h1>
         <p className='mt-6'>
           NYU’s premier <span className='text-violet-600'>open source</span> club connecting
           students to create an inclusive environment to work on projects together.
