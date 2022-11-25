@@ -1,7 +1,9 @@
 import classNames from 'classnames';
 import { Link } from 'gatsby';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Button from './Button';
+import Close from '../svgs/close.svg';
+import Menu from '../svgs/menu.svg';
 
 type NavBarElement = React.ElementRef<'header'>;
 type NavBarProps = React.ComponentPropsWithoutRef<'header'>;
@@ -15,6 +17,15 @@ const NAV_LINKS = [
 const NavBar = React.forwardRef<NavBarElement, NavBarProps>(({ className, ...restProps }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
+  useEffect(() => {
+    const handleResize = () => setIsMobileMenuOpen(false);
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);
 
   return (
@@ -27,23 +38,16 @@ const NavBar = React.forwardRef<NavBarElement, NavBarProps>(({ className, ...res
         </div>
         <div className='block lg:hidden'>
           <button
-            className='flex items-center px-3 py-2 border rounded border-indigo-700'
+            className='flex w-10 h-8 items-center justify-center border rounded border-indigo-700'
             onClick={toggleMobileMenu}
           >
-            <svg
-              className='fill-current h-3 w-3'
-              viewBox='0 0 20 20'
-              xmlns='http://www.w3.org/2000/svg'
-            >
-              <title>Menu</title>
-              <path d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z' />
-            </svg>
+            {isMobileMenuOpen ? <Close /> : <Menu />}
           </button>
         </div>
         <div
           className={`${
-            isMobileMenuOpen ? 'visible' : 'hidden'
-          } w-full block flex-grow mt-2 lg:mt-0 lg:flex lg:items-center lg:w-auto lg:opacity-100 lg:visible`}
+            isMobileMenuOpen ? 'h-44' : 'h-0'
+          } w-full block truncate flex-grow mt-2 transition-height duration-100 lg:mt-0 lg:flex lg:items-center lg:w-auto lg:h-auto`}
         >
           <div className='lg:flex lg:flex-row lg:flex-grow lg:space-x-8'>
             {NAV_LINKS.map(({ to, value }) => (
