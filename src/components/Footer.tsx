@@ -15,8 +15,8 @@ const SOCIAL_ICONS = [
 const Footer = React.forwardRef<FooterElement, FooterProps>(({ className, ...restProps }) => (
   <footer className={className} {...restProps}>
     <div className='w-full h-24 bg-gray-100 flex flex-row items-center justify-center'>
-      <div className='max-w-5xl w-full flex justify-between items-center space-x-32'>
-        <div className='flex flex-row justify-between space-x-4'>
+      <div className='max-w-5xl w-full px-4 md:flex md:justify-between md:items-center md:space-x-32'>
+        <div className='block flex max-w-xs mx-auto md:mx-0 flex-row justify-between space-x-4'>
           {SOCIAL_ICONS.map(({ to, getMark }) => (
             <a
               key={to}
@@ -29,7 +29,7 @@ const Footer = React.forwardRef<FooterElement, FooterProps>(({ className, ...res
             </a>
           ))}
         </div>
-        <div className='text-neutral-900 font-semibold'>
+        <div className='block text-neutral-900 font-semibold mx-auto md:mx-0 max-w-fit mt-2 md:mt-0'>
           <a
             href='https://discord.com/invite/75jgtXy7rz'
             className='text-indigo-500'
