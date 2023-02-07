@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { Event, events } from '../data/events.ts';
 import type { HeadFC, PageProps } from 'gatsby';
-import Layout from '../../components/Layout';
-import Card from '../../components/Card';
+import Layout from '../components/Layout';
+import Card from '../components/Card';
 import Location from '../svgs/location.svg';
 import Clock from '../svgs/clock.svg';
 
