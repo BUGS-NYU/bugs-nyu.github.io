@@ -1,4 +1,4 @@
-import meetAndGreet from '../../images/events/meet-and-greet.gif';
+import meetAndGreet from '../images/events/meet-and-greet.gif';
 
 export interface Event {
   title: string;
