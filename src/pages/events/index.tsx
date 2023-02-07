@@ -35,7 +35,7 @@ const getDateText = (event: Event) => {
 
 const EventsList = ({ events }: EventsListProps) => {
   return (
-    <div className='mt-8 grid grid-cols-1 gap-4 md:grid-cols-2'>
+    <div className='mb-8 grid grid-cols-1 gap-4 md:grid-cols-2'>
       {events.map((event) => (
         <Card shadow='normal' key={event.title}>
           <div className='-m-8 mb-0'>
@@ -67,11 +67,11 @@ const EventsPage: React.FC<PageProps> = () => {
     <Layout>
       <h1 className='font-bold text-4xl'>Events</h1>
       <p className='mt-2'>We'd love to have you join us at our events!</p>
-      <h2 className='mt-8 font-bold text-2xl'>Upcoming Events</h2>
+      <h2 className='mt-8 mb-8 font-bold text-2xl'>Upcoming Events</h2>
       <EventsList events={upcomingEvents} />
       {pastEvents.length > 0 && (
         <>
-          <h2 className='mt-8 font-bold text-2xl'>Past Events</h2>
+          <h2 className='mb-8 font-bold text-2xl'>Past Events</h2>
           <EventsList events={pastEvents} />
         </>
       )}
