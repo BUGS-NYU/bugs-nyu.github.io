@@ -7,6 +7,7 @@ import Location from '../../svgs/location.svg';
 import Clock from '../../svgs/clock.svg';
 
 interface EventsListProps {
+  title: string;
   events: Event[];
 }
 
@@ -33,29 +34,38 @@ const getDateText = (event: Event) => {
   return `${month} ${day}, ${year} at ${time}`;
 };
 
-const EventsList = ({ events }: EventsListProps) => {
+const EventsList = ({ title, events }: EventsListProps) => {
+  events = events.sort((a, b) => {
+    return a.date.getTime() - b.date.getTime();
+  });
+
+  if (events.length === 0) return null;
+
   return (
-    <div className='mb-8 grid grid-cols-1 gap-4 md:grid-cols-2'>
-      {events.map((event) => (
-        <Card shadow='normal' key={event.title}>
-          <div className='-m-8 mb-0'>
-            <img className='w-full h-48 rounded-t-lg object-cover' src={event.cover} alt='' />
-          </div>
-          <h3 className='mt-6 text-xl font-bold'>{event.title}</h3>
-          <ul className='text-zinc-600'>
-            <li className='my-2 flex gap-x-2'>
-              <Location className='flex-shrink-0 inline-block' />
-              {event.location}
-            </li>
-            <li className='my-2 flex gap-x-2'>
-              <Clock className='flex-shrink-0 inline-block' />
-              {getDateText(event)}
-            </li>
-          </ul>
-          <p>{event.description}</p>
-        </Card>
-      ))}
-    </div>
+    <>
+      <h2 className='font-bold text-2xl'>{title}</h2>
+      <div className='my-8 grid grid-cols-1 gap-4 md:grid-cols-2'>
+        {events.map((event) => (
+          <Card shadow='normal' key={event.title}>
+            <div className='-m-8 mb-0'>
+              <img className='w-full h-48 rounded-t-lg object-cover' src={event.cover} alt='' />
+            </div>
+            <h3 className='mt-6 text-xl font-bold'>{event.title}</h3>
+            <ul className='text-zinc-600'>
+              <li className='my-2 flex gap-x-2'>
+                <Location className='flex-shrink-0 inline-block' />
+                {event.location}
+              </li>
+              <li className='my-2 flex gap-x-2'>
+                <Clock className='flex-shrink-0 inline-block' />
+                {getDateText(event)}
+              </li>
+            </ul>
+            <p>{event.description}</p>
+          </Card>
+        ))}
+      </div>
+    </>
   );
 };
 
@@ -66,15 +76,9 @@ const EventsPage: React.FC<PageProps> = () => {
   return (
     <Layout>
       <h1 className='font-bold text-4xl'>Events</h1>
-      <p className='mt-2'>We'd love to have you join us at our events!</p>
-      <h2 className='mt-8 mb-8 font-bold text-2xl'>Upcoming Events</h2>
-      <EventsList events={upcomingEvents} />
-      {pastEvents.length > 0 && (
-        <>
-          <h2 className='mb-8 font-bold text-2xl'>Past Events</h2>
-          <EventsList events={pastEvents} />
-        </>
-      )}
+      <p className='mt-2 mb-8'>We'd love to have you join us at our events!</p>
+      <EventsList title='Upcoming Events' events={upcomingEvents} />
+      <EventsList title='Past Events' events={pastEvents} />
     </Layout>
   );
 };
