@@ -13,7 +13,7 @@ export interface Event {
 export const events: Event[] = [
   {
     title: 'Meet and Greet',
-    description: 'Come and learn about Bugs@NYU',
+    description: 'Join us and learn about what BUGS@NYU is and meet the e-board!',
     date: new Date('February 17, 2023'),
     startTime: '5 PM',
     endTime: '6 PM',
@@ -21,8 +21,9 @@ export const events: Event[] = [
     cover: meetAndGreet,
   },
   {
-    title: 'Web Development Workshop',
-    description: 'Learn about the popular web development frameworks',
+    title: 'Git Workshop',
+    description:
+      'Customize your GitHub profile while learning about the Git version control system.',
     date: new Date('February 24, 2023'),
     startTime: '5 PM',
     endTime: '6 PM',
@@ -30,8 +31,8 @@ export const events: Event[] = [
     cover: meetAndGreet,
   },
   {
-    title: 'Git Workshop',
-    description: 'Learn about the Git version control system',
+    title: 'Web Development Workshop',
+    description: 'Build your own website in React in our hands-on workshop.',
     date: new Date('March 3, 2023'),
     startTime: '5 PM',
     endTime: '6 PM',
@@ -40,7 +41,7 @@ export const events: Event[] = [
   },
   {
     title: 'Web Scraping Workshop',
-    description: 'Learn about web scraping with Playwright',
+    description: 'Learn about web scraping with Playwright.',
     date: new Date('March 24, 2023'),
     startTime: '5 PM',
     endTime: '6 PM',
@@ -48,8 +49,26 @@ export const events: Event[] = [
     cover: meetAndGreet,
   },
   {
+    title: 'Club Project: Part 1',
+    description: 'TBD',
+    date: new Date('April 7, 2023'),
+    startTime: '5 PM',
+    endTime: '6 PM',
+    location: 'TBD',
+    cover: meetAndGreet,
+  },
+  {
+    title: 'Club Project: Part 2',
+    description: 'TBD',
+    date: new Date('April 21, 2023'),
+    startTime: '5 PM',
+    endTime: '6 PM',
+    location: 'TBD',
+    cover: meetAndGreet,
+  },
+  {
     title: 'End of semester party!',
-    description: 'Last event of the semester with Bugs',
+    description: 'Join us for an end of semester get-together!',
     date: new Date('May 5, 2023'),
     startTime: '6 PM',
     endTime: '8 PM',

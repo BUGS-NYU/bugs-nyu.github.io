@@ -43,25 +43,25 @@ const EventsList = ({ title, events }: EventsListProps) => {
 
   return (
     <>
-      <h2 className='font-bold text-2xl'>{title}</h2>
-      <div className='my-8 grid grid-cols-1 gap-4 md:grid-cols-2'>
+      <h2 className='text-4xl font-bold'>{title}</h2>
+      <div className='mt-8 mb-16 grid gap-12 grid-cols-1 sm:grid-cols-2'>
         {events.map((event) => (
-          <Card shadow='normal' key={event.title}>
+          <Card shadow='none' key={event.title}>
             <div className='-m-8 mb-0'>
               <img className='w-full h-48 rounded-t-lg object-cover' src={event.cover} alt='' />
             </div>
             <h3 className='mt-6 text-xl font-bold'>{event.title}</h3>
             <ul className='text-zinc-600'>
               <li className='my-2 flex gap-x-2'>
-                <Location className='flex-shrink-0 inline-block' />
-                {event.location}
-              </li>
-              <li className='my-2 flex gap-x-2'>
                 <Clock className='flex-shrink-0 inline-block' />
                 {getDateText(event)}
               </li>
+              <li className='my-2 flex gap-x-2'>
+                <Location className='flex-shrink-0 inline-block' />
+                {event.location}
+              </li>
             </ul>
-            <p>{event.description}</p>
+            <p className='mt-4'>{event.description}</p>
           </Card>
         ))}
       </div>
@@ -75,8 +75,6 @@ const EventsPage: React.FC<PageProps> = () => {
   const pastEvents = events.filter(({ date }) => date < currDate);
   return (
     <Layout>
-      <h1 className='font-bold text-4xl'>Events</h1>
-      <p className='mt-2 mb-8'>We'd love to have you join us at our events!</p>
       <EventsList title='Upcoming Events' events={upcomingEvents} />
       <EventsList title='Past Events' events={pastEvents} />
     </Layout>
