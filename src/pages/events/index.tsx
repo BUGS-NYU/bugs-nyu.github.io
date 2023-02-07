@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Event, events } from './events';
+import { Event, events } from './events-data';
 import type { HeadFC, PageProps } from 'gatsby';
 import Layout from '../../components/Layout';
 import Card from '../../components/Card';
@@ -69,8 +69,12 @@ const EventsPage: React.FC<PageProps> = () => {
       <p className='mt-2'>We'd love to have you join us at our events!</p>
       <h2 className='mt-8 font-bold text-2xl'>Upcoming Events</h2>
       <EventsList events={upcomingEvents} />
-      <h2 className='mt-8 font-bold text-2xl'>Past Events</h2>
-      <EventsList events={pastEvents} />
+      {pastEvents.length > 0 && (
+        <>
+          <h2 className='mt-8 font-bold text-2xl'>Past Events</h2>
+          <EventsList events={pastEvents} />
+        </>
+      )}
     </Layout>
   );
 };
