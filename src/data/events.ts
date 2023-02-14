@@ -16,8 +16,8 @@ export const events: Event[] = [
     description: 'Join us and learn about what BUGS@NYU is and meet the e-board!',
     date: new Date('February 17, 2023'),
     startTime: '5 PM',
-    endTime: '6 PM',
-    location: '102 WW Hall',
+    endTime: '7 PM',
+    location: '101 WW Hall',
     cover: meetAndGreet,
   },
   {
