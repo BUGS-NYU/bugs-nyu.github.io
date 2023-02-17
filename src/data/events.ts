@@ -15,7 +15,7 @@ export const events: Event[] = [
     date: new Date('February 17, 2023'),
     startTime: '5 PM',
     endTime: '6 PM',
-    location: '102 WW Hall',
+    location: 'WWH Room 101',
     cover: '/images/events/meet-and-greet.gif',
   },
   {
@@ -25,8 +25,8 @@ export const events: Event[] = [
     date: new Date('February 24, 2023'),
     startTime: '5 PM',
     endTime: '6 PM',
-    location: 'TBD',
-    cover: '/images/events/meet-and-greet.gif',
+    location: 'WWH Room 101',
+    cover: '/images/events/git-workshop.gif',
   },
   {
     title: 'Web Development Workshop',
@@ -34,8 +34,8 @@ export const events: Event[] = [
     date: new Date('March 3, 2023'),
     startTime: '5 PM',
     endTime: '6 PM',
-    location: 'TBD',
-    cover: '/images/events/meet-and-greet.gif',
+    location: 'WWH Room 101',
+    cover: '/images/events/web-dev.jpeg',
   },
   {
     title: 'Web Scraping Workshop',
@@ -43,8 +43,8 @@ export const events: Event[] = [
     date: new Date('March 24, 2023'),
     startTime: '5 PM',
     endTime: '6 PM',
-    location: 'TBD',
-    cover: '/images/events/meet-and-greet.gif',
+    location: 'WWH Room 101',
+    cover: '/images/events/scraping.jpeg',
   },
   {
     title: 'Club Project: Part 1',
@@ -52,8 +52,8 @@ export const events: Event[] = [
     date: new Date('April 7, 2023'),
     startTime: '5 PM',
     endTime: '6 PM',
-    location: 'TBD',
-    cover: '/images/events/meet-and-greet.gif',
+    location: 'WWH Room 101',
+    cover: '/images/events/tbd.png',
   },
   {
     title: 'Club Project: Part 2',
@@ -61,8 +61,8 @@ export const events: Event[] = [
     date: new Date('April 21, 2023'),
     startTime: '5 PM',
     endTime: '6 PM',
-    location: 'TBD',
-    cover: '/images/events/meet-and-greet.gif',
+    location: 'WWH Room 101',
+    cover: '/images/events/tbd.png',
   },
   {
     title: 'End of semester party!',
@@ -70,7 +70,7 @@ export const events: Event[] = [
     date: new Date('May 5, 2023'),
     startTime: '6 PM',
     endTime: '8 PM',
-    location: 'TBD',
-    cover: '/images/events/meet-and-greet.gif',
+    location: 'WWH Room 101',
+    cover: '/images/events/tbd.png',
   },
 ];

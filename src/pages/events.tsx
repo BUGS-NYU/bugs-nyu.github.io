@@ -70,9 +70,9 @@ const EventsList = ({ title, events }: EventsListProps) => {
 };
 
 const EventsPage: React.FC<PageProps> = () => {
-  const currDate = new Date().setTime(0);
-  const upcomingEvents = events.filter(({ date }: Event) => date >= currDate);
-  const pastEvents = events.filter(({ date }: Event) => date < currDate);
+  const currDate = new Date().setHours(0, 0, 0, 0);
+  const upcomingEvents = events.filter(({ date }: Event) => date.getTime() >= currDate);
+  const pastEvents = events.filter(({ date }: Event) => date.getTime() < currDate);
 
   return (
     <Layout>
