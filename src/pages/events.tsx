@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Event, events } from '../data/events.ts';
+import { Event, events } from '../data/events';
 import type { HeadFC, PageProps } from 'gatsby';
 import Layout from '../components/Layout';
 import Card from '../components/Card';
@@ -70,9 +70,10 @@ const EventsList = ({ title, events }: EventsListProps) => {
 };
 
 const EventsPage: React.FC<PageProps> = () => {
-  const currDate = new Date();
-  const upcomingEvents = events.filter(({ date }) => date >= currDate);
-  const pastEvents = events.filter(({ date }) => date < currDate);
+  const currDate = new Date().setTime(0);
+  const upcomingEvents = events.filter(({ date }: Event) => date >= currDate);
+  const pastEvents = events.filter(({ date }: Event) => date < currDate);
+
   return (
     <Layout>
       <EventsList title='Upcoming Events' events={upcomingEvents} />
