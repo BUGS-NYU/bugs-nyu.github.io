@@ -35,6 +35,7 @@
     "gatsby-plugin-sitemap": "^6.0.0",
     "gatsby-source-filesystem": "^5.0.0",
     "gatsby-transformer-sharp": "^5.0.0",
+    "iconoir-react": "^6.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
