@@ -1,4 +1,3 @@
-import classNames from 'classnames';
 import { Link } from 'gatsby';
 import React, { useState, useEffect } from 'react';
 import Button from './Button';
@@ -14,13 +13,12 @@ const NAV_LINKS = [
   { to: '/events', value: 'Events' },
 ];
 
-const NavBar = React.forwardRef<NavBarElement, NavBarProps>(({ className, ...restProps }) => {
+const NavBar = React.forwardRef<NavBarElement, NavBarProps>(({ ...restProps }) => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
   useEffect(() => {
     const handleResize = () => setIsMobileMenuOpen(false);
     window.addEventListener('resize', handleResize);
-
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -29,14 +27,14 @@ const NavBar = React.forwardRef<NavBarElement, NavBarProps>(({ className, ...res
   const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);
 
   return (
-    <header className={className} {...restProps}>
+    <header {...restProps}>
       <nav className='flex max-w-5xl mx-auto items-center justify-between flex-wrap p-8'>
-        <div className='flex items-center flex-shrink-0 mr-6'>
-          <Link to='/' className='font-bold text-l tracking-tight'>
+        <div className='flex items-center flex-shrink-0'>
+          <Link to='/' className='text-xl font-bold'>
             BUGS
           </Link>
         </div>
-        <div className='block lg:hidden'>
+        <div className='block md:hidden'>
           <button
             className='flex w-10 h-8 items-center justify-center border rounded border-indigo-700'
             onClick={toggleMobileMenu}
@@ -47,11 +45,15 @@ const NavBar = React.forwardRef<NavBarElement, NavBarProps>(({ className, ...res
         <div
           className={`${
             isMobileMenuOpen ? 'h-44' : 'h-0'
-          } w-full block truncate flex-grow mt-2 transition-height duration-100 lg:mt-0 lg:flex lg:items-center lg:w-auto lg:h-auto`}
+          } w-full block truncate flex-grow mt-2 transition-height duration-100 md:mt-0 md:flex md:items-center md:w-auto md:h-auto`}
         >
-          <div className='lg:flex lg:flex-row lg:flex-grow lg:space-x-8'>
+          <div className='md:flex md:flex-row md:flex-grow md:space-x-12 md:justify-center'>
             {NAV_LINKS.map(({ to, value }) => (
-              <Link key={value} to={to} className='block mb-4 lg:mb-0 lg:inline-block'>
+              <Link
+                key={value}
+                to={to}
+                className='text-zinc-800 block mb-4 md:mb-0 md:inline-block'
+              >
                 {value}
               </Link>
             ))}
