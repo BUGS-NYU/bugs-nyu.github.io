@@ -1,8 +1,7 @@
 import { Link } from 'gatsby';
+import { Cancel, Menu } from 'iconoir-react';
 import React, { useState, useEffect } from 'react';
 import Button from './Button';
-import Close from '../svgs/close.svg';
-import Menu from '../svgs/menu.svg';
 
 type NavBarElement = React.ElementRef<'header'>;
 type NavBarProps = React.ComponentPropsWithoutRef<'header'>;
@@ -35,11 +34,8 @@ const NavBar = React.forwardRef<NavBarElement, NavBarProps>(({ ...restProps }) =
           </Link>
         </div>
         <div className='block md:hidden'>
-          <button
-            className='flex w-10 h-8 items-center justify-center border rounded border-indigo-700'
-            onClick={toggleMobileMenu}
-          >
-            {isMobileMenuOpen ? <Close /> : <Menu />}
+          <button className='flex w-10 h-10 items-center justify-center' onClick={toggleMobileMenu}>
+            {isMobileMenuOpen ? <Cancel /> : <Menu />}
           </button>
         </div>
         <div

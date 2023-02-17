@@ -3,8 +3,7 @@ import { Event, events } from '../data/events';
 import type { HeadFC, PageProps } from 'gatsby';
 import Layout from '../components/Layout';
 import Card from '../components/Card';
-import Location from '../svgs/location.svg';
-import Clock from '../svgs/clock.svg';
+import { Clock, PinAlt } from 'iconoir-react';
 
 interface EventsListProps {
   title: string;
@@ -57,7 +56,7 @@ const EventsList = ({ title, events }: EventsListProps) => {
                 {getDateText(event)}
               </li>
               <li className='my-2 flex gap-x-2'>
-                <Location className='flex-shrink-0 inline-block' />
+                <PinAlt className='flex-shrink-0 inline-block' />
                 {event.location}
               </li>
             </ul>
