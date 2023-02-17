@@ -2,71 +2,7 @@ import * as React from 'react';
 import { Event, events } from '../data/events';
 import type { HeadFC, PageProps } from 'gatsby';
 import Layout from '../components/Layout';
-import Card from '../components/Card';
-import { Clock, PinAlt } from 'iconoir-react';
-
-interface EventsListProps {
-  title: string;
-  events: Event[];
-}
-
-const monthNames = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
-
-const getDateText = (event: Event) => {
-  const month = monthNames[event.date.getMonth()];
-  const day = event.date.getDate();
-  const year = event.date.getFullYear();
-  const time = `${event.startTime} - ${event.endTime}`;
-  return `${month} ${day}, ${year} at ${time}`;
-};
-
-const EventsList = ({ title, events }: EventsListProps) => {
-  events = events.sort((a, b) => {
-    return a.date.getTime() - b.date.getTime();
-  });
-
-  if (events.length === 0) return null;
-
-  return (
-    <>
-      <h2 className='text-4xl font-bold'>{title}</h2>
-      <div className='mt-8 mb-16 grid gap-12 grid-cols-1 sm:grid-cols-2'>
-        {events.map((event) => (
-          <Card shadow='none' key={event.title}>
-            <div className='-m-8 mb-0'>
-              <img className='w-full h-48 rounded-t-lg object-cover' src={event.cover} alt='' />
-            </div>
-            <h3 className='mt-6 text-xl font-bold'>{event.title}</h3>
-            <ul className='text-zinc-600'>
-              <li className='my-2 flex gap-x-2'>
-                <Clock className='flex-shrink-0 inline-block' />
-                {getDateText(event)}
-              </li>
-              <li className='my-2 flex gap-x-2'>
-                <PinAlt className='flex-shrink-0 inline-block' />
-                {event.location}
-              </li>
-            </ul>
-            <p className='mt-4'>{event.description}</p>
-          </Card>
-        ))}
-      </div>
-    </>
-  );
-};
+import EventsList from '../components/EventsList';
 
 const EventsPage: React.FC<PageProps> = () => {
   const currDate = new Date().setHours(0, 0, 0, 0);
@@ -75,8 +11,24 @@ const EventsPage: React.FC<PageProps> = () => {
 
   return (
     <Layout>
-      <EventsList title='Upcoming Events' events={upcomingEvents} />
-      <EventsList title='Past Events' events={pastEvents} />
+      <div className='max-w-5xl mx-auto px-8 flex flex-col py-8'>
+        <>
+          {upcomingEvents.length > 0 ? (
+            <>
+              <h2 className='mb-4 text-2xl font-bold'>Upcoming Events</h2>
+              <EventsList events={upcomingEvents} />
+            </>
+          ) : null}
+        </>
+        <>
+          {pastEvents.length > 0 ? (
+            <>
+              <h2 className='mb-4 text-2xl font-bold'>Upcoming Events</h2>
+              <EventsList events={pastEvents} />
+            </>
+          ) : null}
+        </>
+      </div>
     </Layout>
   );
 };
