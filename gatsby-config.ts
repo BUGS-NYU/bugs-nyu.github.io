@@ -38,6 +38,13 @@ const config: GatsbyConfig = {
       },
       __key: 'images',
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'members',
+        path: './src/data/members',
+      },
+    },
   ],
 };
 
