@@ -1,5 +1,5 @@
 import * as React from 'react';
-import type { HeadFC, PageProps } from 'gatsby';
+import { graphql, HeadFC, PageProps, useStaticQuery } from 'gatsby';
 import Layout from '../components/Layout';
 import Card from '../components/Card';
 import { team, TeamMember } from '../data/team';
@@ -14,25 +14,61 @@ const TeamMemberCard: React.FC<TeamMember> = ({ name, description, profileImg })
   </Card>
 );
 
-const AboutPage: React.FC<PageProps> = () => (
-  <Layout>
-    <div className='max-w-5xl mx-auto px-8 flex flex-col py-8'>
-      <h1 className='text-4xl font-bold'>About Us</h1>
-      <p className='mt-4'>
-        BUGS is the premier open source club at NYU; we advocate for the ideals of open source via
-        first-hand experience of students having an exciting and inclusive environment for them to
-        develop their own projects, work together with other members on larger projects, and take
-        their skills to contribute to pre-existing open source projects.
-      </p>
-      <h2 className='mt-12 text-4xl font-bold'>Executive Board</h2>
-      <div className='mt-4 mb-16 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
-        {team.map((teamMember) => (
-          <TeamMemberCard key={teamMember.name} {...teamMember} />
-        ))}
+const AboutPage: React.FC<PageProps> = () => {
+  const data = useStaticQuery(
+    graphql`
+      {
+        allFile(filter: { sourceInstanceName: { eq: "members" } }) {
+          nodes {
+            name
+            fields {
+              content
+            }
+          }
+        }
+      }
+    `,
+  );
+
+  const membersNames: string[] = [];
+  data.allFile.nodes.forEach((node: any) => {
+    if (node.name === 'netid1234') return;
+
+    const content = node.fields.content;
+    membersNames.push(content);
+  });
+  membersNames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
+
+  const formatter = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' });
+
+  return (
+    <Layout>
+      <div className='max-w-5xl mx-auto px-8 flex flex-col py-8'>
+        <h1 className='text-4xl font-bold'>About Us</h1>
+        <p className='mt-4'>
+          BUGS is the premier open source club at NYU; we advocate for the ideals of open source via
+          first-hand experience of students having an exciting and inclusive environment for them to
+          develop their own projects, work together with other members on larger projects, and take
+          their skills to contribute to pre-existing open source projects.
+        </p>
+        <h2 className='mt-12 text-4xl font-bold'>Executive Board</h2>
+        <div className='mt-4 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
+          {team.map((teamMember) => (
+            <TeamMemberCard key={teamMember.name} {...teamMember} />
+          ))}
+        </div>
+        <h2 className='mt-12 text-4xl font-bold'>Members</h2>
+        <div className='mt-4 mb-16'>
+          <p>
+            A list of some of our active members (in alphabetical order):{' '}
+            {formatter.format(membersNames)}
+          </p>
+          <p className='mt-4'>Want your name to be a part of this list? Make a pull request!</p>
+        </div>
       </div>
-    </div>
-  </Layout>
-);
+    </Layout>
+  );
+};
 
 export default AboutPage;
-export const Head: HeadFC = () => <title>Events</title>;
+export const Head: HeadFC = () => <title>About</title>;
