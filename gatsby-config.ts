@@ -43,7 +43,6 @@ const config: GatsbyConfig = {
       options: {
         name: 'members',
         path: './src/data/members',
-        ignore: ['**/netid1234.md'],
       },
     },
   ],

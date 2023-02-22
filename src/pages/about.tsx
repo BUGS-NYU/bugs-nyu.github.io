@@ -30,13 +30,13 @@ const AboutPage: React.FC<PageProps> = () => {
     `,
   );
 
-  const membersNames: string[] = [];
-  data.allFile.nodes.forEach((node: any) => {
-    if (node.name === 'netid1234') return;
-
-    const content = node.fields.content;
-    membersNames.push(content);
-  });
+  const membersNames: string[] = data.allFile.nodes.reduce((arr: string[], curr: any) => {
+    if (curr.name !== 'netid1234') {
+      const content = curr.fields.content;
+      arr.push(content);
+    }
+    return arr;
+  }, []);
   membersNames.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));
 
   const formatter = new Intl.ListFormat('en', { style: 'long', type: 'conjunction' });
