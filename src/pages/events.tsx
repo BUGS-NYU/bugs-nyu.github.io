@@ -23,7 +23,7 @@ const EventsPage: React.FC<PageProps> = () => {
         <>
           {pastEvents.length > 0 ? (
             <>
-              <h2 className='mb-4 text-2xl font-bold'>Upcoming Events</h2>
+              <h2 className='mt-8 mb-4 text-2xl font-bold'>Past Events</h2>
               <EventsList events={pastEvents} />
             </>
           ) : null}
