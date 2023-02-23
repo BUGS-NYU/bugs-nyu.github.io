@@ -66,7 +66,7 @@ const AboutPage: React.FC<PageProps> = () => {
           <p className='mt-4'>
             Want your name to be a part of this list? Make a{' '}
             <a
-              className='text-purple-400 font-semibold'
+              className='text-purple-600 font-semibold'
               target='_blank'
               rel='noopener noreferrer'
               href='https://github.com/BUGS-NYU/bugs-nyu.github.io/tree/main/src/data/members'
