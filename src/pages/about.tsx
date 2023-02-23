@@ -31,7 +31,7 @@ const AboutPage: React.FC<PageProps> = () => {
   );
 
   const membersNames: string[] = data.allFile.nodes.reduce((arr: string[], curr: any) => {
-    if (curr.name !== 'netid1234') {
+    if (curr.name !== 'netid1234' && curr.name !== 'README') {
       const content = curr.fields.content;
       arr.push(content);
     }
@@ -63,7 +63,17 @@ const AboutPage: React.FC<PageProps> = () => {
             A list of some of our active members (in alphabetical order):{' '}
             {formatter.format(membersNames)}
           </p>
-          <p className='mt-4'>Want your name to be a part of this list? Make a pull request!</p>
+          <p className='mt-4'>
+            Want your name to be a part of this list? Make a{' '}
+            <a
+              className='text-purple-400 font-semibold'
+              target='_blank'
+              rel='noopener noreferrer'
+              href='https://github.com/BUGS-NYU/bugs-nyu.github.io/tree/main/src/data/members'
+            >
+              pull request!
+            </a>
+          </p>
         </div>
       </div>
     </Layout>
