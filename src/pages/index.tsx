@@ -3,7 +3,6 @@ import { HeadFC, Link, PageProps } from 'gatsby';
 import Button from '../components/Button';
 import Layout from '../components/Layout';
 import BugsLogo from '../svgs/bugs.svg';
-import Card from '../components/Card';
 import EventsList from '../components/EventsList';
 import { events, Event } from '../data/events';
 import { ArrowRight } from 'iconoir-react';

@@ -10,7 +10,7 @@ const SOCIAL_ICONS = [
   { to: 'mailto:bugsnyu@gmail.com', getMark: () => <Mail /> },
 ];
 
-const Footer = React.forwardRef<FooterElement, FooterProps>(({ className, ...restProps }) => (
+const Footer = React.forwardRef<FooterElement, FooterProps>(({ ...restProps }) => (
   <footer className='w-full bg-[#3D1E5B] text-white' {...restProps}>
     <div className='mx-auto max-w-5xl px-8 py-24 flex flex-col gap-12 items-start justify-between md:flex-row md:items-center md:gap-0'>
       <div className='flex flex-col gap-y-4'>
@@ -38,5 +38,7 @@ const Footer = React.forwardRef<FooterElement, FooterProps>(({ className, ...res
     </div>
   </footer>
 ));
+
+Footer.displayName = 'Footer';
 
 export default Footer;
