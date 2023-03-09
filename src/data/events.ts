@@ -31,7 +31,7 @@ export const events: Event[] = [
   {
     title: 'Web Scraping Workshop',
     description: 'Learn about web scraping with Playwright.',
-    date: new Date('March 10, 2023'),
+    date: new Date('March 24, 2023'),
     startTime: '5 PM',
     endTime: '6 PM',
     location: 'WWH Room 101',
@@ -40,7 +40,7 @@ export const events: Event[] = [
   {
     title: 'Web Development Workshop',
     description: 'Build your own website in React in our hands-on workshop.',
-    date: new Date('March 24, 2023'),
+    date: new Date('March 31, 2023'),
     startTime: '5 PM',
     endTime: '6 PM',
     location: 'WWH Room 101',
@@ -49,7 +49,7 @@ export const events: Event[] = [
   {
     title: 'Club Project: Part 1',
     description: 'TBD',
-    date: new Date('April 7, 2023'),
+    date: new Date('April 14, 2023'),
     startTime: '5 PM',
     endTime: '6 PM',
     location: 'WWH Room 101',
@@ -58,7 +58,7 @@ export const events: Event[] = [
   {
     title: 'Club Project: Part 2',
     description: 'TBD',
-    date: new Date('April 21, 2023'),
+    date: new Date('April 28, 2023'),
     startTime: '5 PM',
     endTime: '6 PM',
     location: 'WWH Room 101',
