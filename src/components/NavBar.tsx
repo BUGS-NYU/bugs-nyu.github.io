@@ -67,4 +67,6 @@ const NavBar = React.forwardRef<NavBarElement, NavBarProps>(({ ...restProps }) =
   );
 });
 
+NavBar.displayName = 'NavBar';
+
 export default NavBar;

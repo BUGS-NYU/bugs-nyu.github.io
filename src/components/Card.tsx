@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import React from 'react';
-import Button from './Button';
 
 type CardElement = React.ElementRef<'div'>;
 type CardProps = React.ComponentPropsWithoutRef<'div'> & {
@@ -49,5 +48,7 @@ const Card = React.forwardRef<CardElement, CardProps>(
     );
   },
 );
+
+Card.displayName = 'Card';
 
 export default Card;
