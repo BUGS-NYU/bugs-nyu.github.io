@@ -21,7 +21,7 @@ const ProjectsPage: React.FC<PageProps> = () => (
             <p className='text-violet-600'>Website For The Club</p>
             <p className='grow mt-4'>
               The website is built from scratch, using React, to be a one-stop-shop for information
-              about the OpenSource Club. It provides information about what the club is for, the
+              about the open source club. It provides information about what the club is for, the
               projects we work on, and upcoming events. We hope to constantly update the website
               with features.
             </p>

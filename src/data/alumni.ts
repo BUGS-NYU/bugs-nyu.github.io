@@ -3,9 +3,9 @@ export interface Alumni {
   description: string;
 }
 
-export const team: Alumni[] = [
+export const alumni: Alumni[] = [
   {
-    name: 'Khanh Nguyen:',
+    name: 'Khanh Nguyen',
     description: `Khanh is a Junior from Vietnam studying Computer Science. BROCKHAMPTON is his all-time favorite boyband. Outside of school, he enjoys trying out good food, exploring the city and contributing to projects. 
     Khanh was the former president.`,
   },

@@ -10,6 +10,7 @@ const NAV_LINKS = [
   { to: '/about', value: 'About us' },
   { to: '/projects', value: 'Projects' },
   { to: '/events', value: 'Events' },
+  { to: '/alumni', value: 'Alumni' },
 ];
 
 const NavBar = React.forwardRef<NavBarElement, NavBarProps>(({ ...restProps }) => {
