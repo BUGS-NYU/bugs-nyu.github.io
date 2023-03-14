@@ -15,8 +15,7 @@ export const alumni: Alumni[] = [
   },
   {
     name: 'Sonia Jain',
-    description: `I'm Sonia and I'm a junior at New York University double majoring in Computer Science and Media, Culture, and Communications. I am interested in game design, art, and I love animals. 
-    In my free time, I work with a variety of organizations to help find dogs and cats' homes. I also love painting and digital art so when I'm not working with animals, I am creating. Sonia was the former director of marketing & communications.`,
+    description: `I'm Sonia and I'm an alumni at New York University double majoring in Computer Science and Media, Culture, and Communications. I am interested in game design, art, and I love animals. In my free time, I work with a variety of organizations to help find dogs and cats' homes. I also love painting and digital art so when I'm not working with animals, I am creating. Sonia was a former director of marketing & communications.`,
   },
   {
     name: 'Bruce Jiang',
