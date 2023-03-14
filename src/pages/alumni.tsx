@@ -16,7 +16,8 @@ const AlumniPage: React.FC<PageProps> = () => {
         <div className='mt-4 mb-8'>
           {alumni.map((alum) => (
             <p className='mb-4' key={alum.name}>
-              <b>{alum.name}</b>: {alum.description}
+              <b>{alum.name}</b>:
+              <div className='mx-4'>{alum.description}</div>
             </p>
           ))}
         </div>
