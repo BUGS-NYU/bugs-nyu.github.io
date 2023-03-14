@@ -4,6 +4,8 @@ import Layout from '../components/Layout';
 import { alumni } from '../data/alumni';
 
 const AlumniPage: React.FC<PageProps> = () => {
+  const alumniDesc = alumni.sort((a, b) => (a.graduation < b.graduation ? 1 : -1));
+
   return (
     <Layout>
       <div className='max-w-5xl mx-auto px-8 flex flex-col py-8'>
@@ -14,9 +16,9 @@ const AlumniPage: React.FC<PageProps> = () => {
           of it in some way.
         </p>
         <div className='mt-4 mb-8'>
-          {alumni.map((alum) => (
+          {alumniDesc.map((alum) => (
             <p className='mb-4' key={alum.name}>
-              <b>{alum.name}</b>:
+              <b>{alum.name}</b> ({alum.graduation}):
               <div className='mx-4'>{alum.description}</div>
             </p>
           ))}
