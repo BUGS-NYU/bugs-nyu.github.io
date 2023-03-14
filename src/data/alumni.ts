@@ -90,7 +90,7 @@ export const alumni: Alumni[] = [
   {
     name: 'Bradley Brecher',
     description:
-      "Alumni from Woodmere, New York who studied Computer Science. Outside of BUGS, you can find him coaching hockey at a local high school. He's a Backend Programmer at SomethingDigital.",
+      `Alumni from Woodmere, New York who studied Computer Science. Outside of BUGS, you can find him coaching hockey at a local high school.`,
   },
   {
     name: 'Ami Nachiappan',
