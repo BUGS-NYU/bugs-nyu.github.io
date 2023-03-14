@@ -82,7 +82,7 @@ export const alumni: Alumni[] = [
   {
     name: 'Deanna Tran',
     description:
-      "Deanna was BUGS's Director of Communication in 2019. Alumni from CAS who studied Computer Science with minors in Web Design and Linguistics. Outside of school, Deanna can be found at a local restaurant or art museum. She's a SWE at Ellevest.",
+      `Deanna was BUGS's Director of Communication in 2019. Alumni from CAS who studied Computer Science with minors in Web Design and Linguistics. Outside of school, Deanna can be found at a local restaurant or art museum.`,
   },
   {
     name: 'Candice Shen',
