@@ -62,7 +62,7 @@ export const alumni: Alumni[] = [
   {
     name: 'Veena Arvind',
     description:
-      "Veena was BUGS's predident from 2018 to 2020. Alumni who studied Computer Science in CAS. She loves to talk about code with other people. In her free time, Veena goes to the gym, makes jewelry, and plays card games. She's a SWE at Google.",
+      `Veena was BUGS's predident from 2018 to 2020. Alumni who studied Computer Science at CAS. She loves to talk about code with other people. In her free time, Veena goes to the gym, makes jewelry, and plays card games.`,
   },
   {
     name: 'Shelly Cao',
