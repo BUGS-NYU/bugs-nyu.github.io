@@ -95,7 +95,7 @@ export const alumni: Alumni[] = [
   {
     name: 'Ami Nachiappan',
     description:
-      "Ami was BUGS's Event Coordinator from 2018 to 2020. Alumni from California who studied Computer Science and minored in Web Design. In her free time, she loves spending time with family, running, and of course, coding!",
+      `Ami was BUGS's Event Coordinator from 2018 to 2020. Alumni from California who studied Computer Science and minored in Web Design. In her free time, she loves spending time with family, running, and of course, coding!`,
   },
   {
     name: 'Brian Shih',
