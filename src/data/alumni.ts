@@ -77,7 +77,7 @@ export const alumni: Alumni[] = [
   {
     name: 'George Ma',
     description:
-      'Alumni from Singapore who majored in Computer Science and Business. He likes reading, writing, coding, and gaming.',
+      `Alumni from Singapore who majored in Computer Science and Business. He likes reading, writing, coding, and gaming.`,
   },
   {
     name: 'Deanna Tran',
