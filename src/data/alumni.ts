@@ -11,8 +11,7 @@ export const alumni: Alumni[] = [
   },
   {
     name: 'Aaditya Mehta',
-    description: `Aaditya is a Senior studying Economics and Mathematics, Aaditya spends way too much time in Stern (#IAmStern). In his free time he likes to listen to music, take long walks, and read Econ papers, sometimes simultaneously. 
-    Aaditya was the former treasurer.`,
+    description: `Aaditya is an alumni majoring in Economics and Mathematics, Aaditya spends way too much time in Stern (#IAmStern). In his free time he likes to listen to music, take long walks, and read Econ papers, sometimes simultaneously. Aaditya was a former treasurer.`,
   },
   {
     name: 'Sonia Jain',
