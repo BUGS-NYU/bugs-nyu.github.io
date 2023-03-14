@@ -84,8 +84,7 @@ export const alumni: Alumni[] = [
   },
   {
     name: 'Candice Shen',
-    description: `Candice Shen was BUGS's Director of Communications in 2019. Alumni from Steinhardt who majored in Media, Culture, and Communication and minored in Web Design. If you cannot find her outside of class, 
-    Candice is traveling or planning for her 23rd country to visit.`,
+    description: `Candice Shen was BUGS's Director of Communications in 2019. Alumni from Steinhardt who majored in Media, Culture, and Communication and minored in Web Design. If you cannot find her outside of class, Candice is traveling or planning for her 23rd country to visit.`,
   },
   {
     name: 'Bradley Brecher',
