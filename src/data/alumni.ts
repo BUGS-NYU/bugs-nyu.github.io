@@ -27,25 +27,25 @@ export const alumni: Alumni[] = [
     name: 'Bruce Jiang',
     graduation: 0,
     description:
-      'Bruce is from China and studied Computer Science and Mathematics. Outside of class, he is crazy in soccer (especially in Chelsea) and basketball. He spends tons of time playing FIFA (most of the time playing Chelsea). Besides, he likes listening to music, reading about history, and travelling. He was the former secretary.',
+      'Bruce is from China and studied Computer Science and Mathematics. Outside of class, he is crazy in soccer (especially in Chelsea) and basketball. He spends tons of time playing FIFA (most of the time playing Chelsea). Besides, he likes listening to music, reading about history, and travelling. Bruce was the former secretary.',
   },
   {
     name: 'Evan Silverman',
     graduation: 2022,
     description:
-      'Evan studied CS at CAS. In his free time, he enjoys working on too many side projects, expanding his record collection, and making memes for @nyumsfbt. He was a former full stack developer.',
+      'Evan studied CS at CAS. In his free time, he enjoys working on too many side projects, expanding his record collection, and making memes for @nyumsfbt. Evan was a former full stack developer.',
   },
   {
     name: 'Yuchen Liu',
     graduation: 2023,
     description:
-      'Yuchen studied CS and Data Science at CAS. He likes to eat ramen, watch movies, meet new people, and work on fun projects. He was a former full stack developer.',
+      'Yuchen studied CS and Data Science at CAS. He likes to eat ramen, watch movies, meet new people, and work on fun projects. Yuchen was a former full stack developer.',
   },
   {
     name: 'Samuel Lin',
     graduation: 2021,
     description:
-      'Samuel was at CAS majoring in Computer Science and minoring in Web Design and Game Design. He was born and raised in Taiwan, but studied in Singapore for high school before coming to New York. He is a big foodie and enjoys trying foods from different cultures. He was a former event coordinator.',
+      'Samuel was at CAS majoring in Computer Science and minoring in Web Design and Game Design. He was born and raised in Taiwan, but studied in Singapore for high school before coming to New York. He is a big foodie and enjoys trying foods from different cultures. Samuel was a former event coordinator.',
   },
   {
     name: 'Vishal Vanam',
