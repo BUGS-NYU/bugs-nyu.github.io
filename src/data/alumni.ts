@@ -57,7 +57,7 @@ export const alumni: Alumni[] = [
     name: 'Nadira Dewji',
     graduation: 2018,
     description:
-      'Nadira was one of the Founders of BUGS and studied Computer Science in CAS. Originally from Tanzania, Nadira loves travelling, scuba diving and wildlife. She’s excited about open source principles and making impactful contributions.',
+      "Nadira was one of the Founders of BUGS and studied Computer Science in CAS. Originally from Tanzania, Nadira loves travelling, scuba diving and wildlife. She's excited about open source principles and making impactful contributions.",
   },
   {
     name: 'David Klein',
