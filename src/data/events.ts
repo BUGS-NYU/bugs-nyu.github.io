@@ -47,6 +47,15 @@ export const events: Event[] = [
     cover: '/images/events/web-dev.jpeg',
   },
   {
+    title: 'Emulation Workshop',
+    description: 'Get a technical overview of emulation and learn how a Game Boy emulator is made.',
+    date: new Date('April 7, 2023'),
+    startTime: '5 PM',
+    endTime: '6:30 PM',
+    location: 'TBD',
+    cover: '/images/events/game-boy.jpg',
+  },
+  {
     title: 'Club Project: Part 1',
     description: 'TBD',
     date: new Date('April 14, 2023'),
