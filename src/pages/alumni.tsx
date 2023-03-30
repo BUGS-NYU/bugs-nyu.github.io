@@ -18,7 +18,9 @@ const AlumniPage: React.FC<PageProps> = () => {
         <div className='mt-4 mb-8'>
           {alumniDesc.map((alum) => (
             <div className='mb-4' key={alum.name}>
-              <p className='font-bold'>{alum.name} ({alum.graduation}):</p>
+              <p className='font-bold'>
+                {alum.name} ({alum.graduation}):
+              </p>
               <div className='mx-4'>{alum.description}</div>
             </div>
           ))}
