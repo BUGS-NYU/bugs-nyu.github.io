@@ -17,6 +17,23 @@ const ProjectsPage: React.FC<PageProps> = () => (
       <div className='mt-12 grid grid-cols-1 gap-4 md:grid-cols-2'>
         <Card shadow='normal'>
           <div className='h-full flex flex-col'>
+            <h2 className='text-xl font-bold'>NYU CS Wiki</h2>
+            <p className='text-violet-600'>Guide for all NYU CS Students</p>
+            <p className='grow mt-4'>
+              The NYU CS Wiki provides guidance and resources for NYU CS students at Tandon and CAS.
+              It is a collaborative effort by students, for students, that gives detailed
+              information on different topics including competitive programming, internships, clubs,
+              and more.
+            </p>
+            <a className='mt-6 justify-self-end' href='https://github.com/BUGS-NYU/nyu-cs-wiki/'>
+              <Button className='w-full flex gap-2 justify-center'>
+                <GitHub className='inline-block' /> View Github
+              </Button>
+            </a>
+          </div>
+        </Card>
+        <Card shadow='normal'>
+          <div className='h-full flex flex-col'>
             <h2 className='text-xl font-bold'>BUGS Website</h2>
             <p className='text-violet-600'>Website For The Club</p>
             <p className='grow mt-4'>
