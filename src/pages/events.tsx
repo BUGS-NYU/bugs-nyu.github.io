@@ -1,21 +1,33 @@
 import * as React from 'react';
+import { Event, events } from '../data/events';
 import type { HeadFC, PageProps } from 'gatsby';
-import Button from '../components/Button';
 import Layout from '../components/Layout';
-import BugsLogo from '../svgs/bugs.svg';
-import Card from '../components/Card';
+import EventsList from '../components/EventsList';
 
 const EventsPage: React.FC<PageProps> = () => {
+  const currDate = new Date().setHours(0, 0, 0, 0);
+  const upcomingEvents = events.filter(({ date }: Event) => date.getTime() >= currDate);
+  const pastEvents = events.filter(({ date }: Event) => date.getTime() < currDate);
+
   return (
     <Layout>
-      <h1 className='text-8xl'>Events</h1>
-      <div className='flex space-x-32 items-center py-10'>
-        <iframe
-          src='https://calendar.google.com/calendar/embed?height=600&wkst=1&bgcolor=%23ffffff&ctz=America%2FNew_York&src=MXJnMXZhOGhpamttNzMydGE0ajQ0bGJjaDRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=Y19iZ2NjZWtsYjQ5b2diMjBpNmExZTc2OHZ0Z0Bncm91cC5jYWxlbmRhci5nb29nbGUuY29t&src=ZW4udXNhI2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&color=%23795548&color=%23A79B8E&color=%230B8043'
-          width={'800'}
-          height={'600'}
-          scrolling={'no'}
-        ></iframe>
+      <div className='max-w-5xl mx-auto px-8 flex flex-col py-8'>
+        <>
+          {upcomingEvents.length > 0 ? (
+            <>
+              <h2 className='mb-4 text-2xl font-bold'>Upcoming Events</h2>
+              <EventsList events={upcomingEvents} />
+            </>
+          ) : null}
+        </>
+        <>
+          {pastEvents.length > 0 ? (
+            <>
+              <h2 className='mt-8 mb-4 text-2xl font-bold'>Past Events</h2>
+              <EventsList events={pastEvents} />
+            </>
+          ) : null}
+        </>
       </div>
     </Layout>
   );
