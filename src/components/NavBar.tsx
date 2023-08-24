@@ -59,11 +59,11 @@ const NavBar = React.forwardRef<NavBarElement, NavBarProps>(({ ...restProps }) =
           </div>
           <div className='md:flex md:flex-row gap-2'>
             <a href='https://discord.gg/75jgtXy7rz'>
-              <Button variant='primary' className='px-6'>
+              <Button variant='secondary' className='px-6'>
                 Join
               </Button>
             </a>
-            <Button variant='primary' className='px-2' onClick={toggleCurrentTheme}>
+            <Button variant='primary' className='pv-6' onClick={toggleCurrentTheme}>
               {currentTheme === 'light' ? '☀️ ' : '🌙'}
             </Button>
           </div>
