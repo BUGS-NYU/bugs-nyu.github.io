@@ -22,8 +22,10 @@ const classes = {
     large: 'rounded-lg',
   },
   variant: {
-    default: 'bg-white border-gray-300 border hover:bg-gray-100 text-black',
-    primary: 'bg-neutral-900 hover:bg-neutral-800 text-white',
+    default:
+      'bg-white dark:bg-neutral-900 dark:border-gray-300 border-gray-300 border hover:bg-gray-100 text-black dark:text-white',
+    primary:
+      'bg-neutral-900 dark:bg-neutral-800 hover:bg-neutral-800 dark:hover:bg-neutral-600 text-white',
     secondary: 'bg-gray-200 hover:bg-gray-800 text-gray-900 hover:text-white',
   },
 };
