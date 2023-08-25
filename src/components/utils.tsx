@@ -1,6 +1,6 @@
 import React, { createContext, PropsWithChildren, useContext, useState } from 'react';
 
-const LOCAL_STORAGE_THEME_KEY = 'bugsTheme';
+const LOCAL_STORAGE_THEME_KEY = 'bugsThemeStorageKey';
 
 type ThemeType = 'dark' | 'light';
 
@@ -9,8 +9,16 @@ type ThemeContextType = {
   toggleCurrentTheme: () => void;
 };
 
+function getSystemThemePreference(): ThemeType {
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    return 'dark';
+  }
+
+  return 'light';
+}
+
 function getCurrentThemeFromLocalStorage(): ThemeType {
-  return (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as ThemeType) ?? 'light';
+  return (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as ThemeType) ?? getSystemThemePreference();
 }
 
 function setCurrentThemeInLocalStorage(themeType: ThemeType) {
@@ -18,7 +26,7 @@ function setCurrentThemeInLocalStorage(themeType: ThemeType) {
 }
 
 const ThemeContext = createContext<ThemeContextType>({
-  currentTheme: getCurrentThemeFromLocalStorage(),
+  currentTheme: 'light',
   toggleCurrentTheme: () => setCurrentThemeInLocalStorage('dark'),
 });
 
