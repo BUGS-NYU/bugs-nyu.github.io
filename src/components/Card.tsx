@@ -9,7 +9,7 @@ type CardProps = React.ComponentPropsWithoutRef<'div'> & {
 };
 
 const classes = {
-  base: 'bg-white border-gray-300 border',
+  base: 'bg-white border-gray-300 border dark:bg-neutral-900 dark:border-neutral-700',
   size: {
     small: 'p-4 text-sm',
     normal: 'p-8',

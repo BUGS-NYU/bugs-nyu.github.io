@@ -29,15 +29,15 @@ const IndexPage: React.FC<PageProps> = () => (
         </div>
       </div>
       <div className='hidden md:block'>
-        <BugsLogo />
+        <BugsLogo className='[&>path]:dark:fill-white' />
       </div>
     </div>
 
-    <div className='bg-[#F9F9FF]'>
+    <div className='bg-[#F9F9FF] dark:bg-neutral-800'>
       <div className='max-w-5xl mx-auto px-8 flex flex-col items-center py-24 lg:py-28 text-center'>
         <p className='text-violet-600 font-bold'>The Mission</p>
         <h2 className='mt-2 text-4xl font-bold'>Create, Contribute, Open Source</h2>
-        <p className='mt-6 text-zinc-800'>
+        <p className='mt-6 light:text-zinc-800 dark:text-white'>
           We aim to bring students together to create impactful projects and develop skills that
           matter. Learn from guest speakers, interactive workshops, and more.
         </p>

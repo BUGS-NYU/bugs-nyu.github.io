@@ -1,13 +1,28 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import NavBar from './NavBar';
 import Footer from './Footer';
+import { ThemeContextProvider, useThemeContext } from './utils';
 
-const Layout: React.FC<{ children: JSX.Element | JSX.Element[] }> = ({ children }) => (
-  <div className='min-h-screen antialiased'>
-    <NavBar />
-    <main className='w-full min-h-[calc(100vh-12rem)]'>{children}</main>
-    <Footer />
-  </div>
-);
+const Layout = ({ children }: PropsWithChildren) => {
+  const { currentTheme } = useThemeContext();
 
-export default Layout;
+  return (
+    <div className={`min-h-screen antialiased ${currentTheme}`}>
+      <div className='light:bg-white dark:bg-zinc-900'>
+        <NavBar />
+        <main className='w-full min-h-[calc(100vh-12rem)] dark:text-white'>{children}</main>
+        <Footer />
+      </div>
+    </div>
+  );
+};
+
+const WrappedLayout = ({ children }: PropsWithChildren) => {
+  return (
+    <ThemeContextProvider>
+      <Layout>{children}</Layout>
+    </ThemeContextProvider>
+  );
+};
+
+export default WrappedLayout;

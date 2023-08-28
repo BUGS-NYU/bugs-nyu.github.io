@@ -47,7 +47,7 @@ const EventsList = ({ events, count }: EventsListProps) => {
               <img className='w-full h-48 rounded-t-lg object-cover' src={event.cover} alt='' />
             </div>
             <h3 className='mt-6 text-xl font-bold'>{event.title}</h3>
-            <ul className='text-zinc-600'>
+            <ul className='text-zinc-600 dark:text-zinc-400'>
               <li className='my-2 flex gap-x-2'>
                 <Clock className='flex-shrink-0 inline-block' />
                 {getDateText(event)}
