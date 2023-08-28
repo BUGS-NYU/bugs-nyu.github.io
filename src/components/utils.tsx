@@ -9,6 +9,10 @@ type ThemeContextType = {
   toggleCurrentTheme: () => void;
 };
 
+function isServer(): boolean {
+  return typeof window === 'undefined';
+}
+
 function getSystemThemePreference(): ThemeType {
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     return 'dark';
@@ -18,10 +22,18 @@ function getSystemThemePreference(): ThemeType {
 }
 
 function getCurrentThemeFromLocalStorage(): ThemeType {
+  if (isServer()) {
+    return 'dark';
+  }
+
   return (localStorage.getItem(LOCAL_STORAGE_THEME_KEY) as ThemeType) ?? getSystemThemePreference();
 }
 
 function setCurrentThemeInLocalStorage(themeType: ThemeType) {
+  if (isServer()) {
+    return;
+  }
+
   localStorage.setItem(LOCAL_STORAGE_THEME_KEY, themeType);
 }
 
