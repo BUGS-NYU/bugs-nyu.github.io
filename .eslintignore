@@ -1,0 +1,9 @@
+.github/
+.cache/
+.gitignore
+.prettierignore
+node_modules
+build
+public
+*.config.js
+

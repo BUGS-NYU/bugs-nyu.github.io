@@ -1,0 +1,37 @@
+import * as React from 'react';
+import { Event, events } from '../data/events';
+import type { HeadFC, PageProps } from 'gatsby';
+import Layout from '../components/Layout';
+import EventsList from '../components/EventsList';
+
+const EventsPage: React.FC<PageProps> = () => {
+  const currDate = new Date().setHours(0, 0, 0, 0);
+  const upcomingEvents = events.filter(({ date }: Event) => date.getTime() >= currDate);
+  const pastEvents = events.filter(({ date }: Event) => date.getTime() < currDate);
+
+  return (
+    <Layout>
+      <div className='max-w-5xl mx-auto px-8 flex flex-col py-8'>
+        <>
+          {upcomingEvents.length > 0 ? (
+            <>
+              <h2 className='mb-4 text-2xl font-bold'>Upcoming Events</h2>
+              <EventsList events={upcomingEvents} />
+            </>
+          ) : null}
+        </>
+        <>
+          {pastEvents.length > 0 ? (
+            <>
+              <h2 className='mt-8 mb-4 text-2xl font-bold'>Past Events</h2>
+              <EventsList events={pastEvents} />
+            </>
+          ) : null}
+        </>
+      </div>
+    </Layout>
+  );
+};
+
+export default EventsPage;
+export const Head: HeadFC = () => <title>Events</title>;
