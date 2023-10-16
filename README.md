@@ -1,6 +1,8 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 
-![Bugs Logo](static/images/logo/bugs.gif)
+<div align="center" width="100%">
+    <img src="static/images/logo/bugs.gif"> 
+</div>
 
 # bugs-nyu.github.io
 
