@@ -1,15 +1,16 @@
 import classNames from 'classnames';
 import React from 'react';
 
-type CardElement = React.ElementRef<'div'>;
-type CardProps = React.ComponentPropsWithoutRef<'div'> & {
+type CardElement = React.ElementRef<'a'>;
+type CardProps = React.ComponentPropsWithoutRef<'a'> & {
   size?: 'small' | 'normal' | 'large';
   radius?: 'small' | 'normal' | 'large';
   shadow?: 'none' | 'normal';
+  link?: string;
 };
 
 const classes = {
-  base: 'bg-white border-gray-300 border dark:bg-neutral-900 dark:border-neutral-700',
+  base: 'bg-white border-gray-300 border dark:bg-neutral-900 dark:border-neutral-700 cursor-pointer hover:bg-gray-200 dark:hover:bg-neutral-800 transition-colors', // Add cursor-pointer for pointer cursor, hover:bg-gray-200 for hover effect, and transition-colors for smooth color transition
   size: {
     small: 'p-4 text-sm',
     normal: 'p-8',
@@ -28,11 +29,21 @@ const classes = {
 
 const Card = React.forwardRef<CardElement, CardProps>(
   (
-    { children, className, size = 'normal', radius = 'normal', shadow = 'none', ...restProps },
+    {
+      children,
+      className,
+      size = 'normal',
+      radius = 'normal',
+      shadow = 'none',
+      link,
+      ...restProps
+    },
     forwardedRef,
   ) => {
     return (
-      <div
+      <a
+        href={link}
+        target='_blank'
         className={classNames(
           classes.base,
           classes.size[size],
@@ -44,7 +55,7 @@ const Card = React.forwardRef<CardElement, CardProps>(
         ref={forwardedRef}
       >
         {children}
-      </div>
+      </a>
     );
   },
 );
