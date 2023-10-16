@@ -1,6 +1,6 @@
 <!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
 
-![Bugs Logo](src/images/logo/bugs.gif)
+![Bugs Logo](static/images/logo/bugs.gif)
 
 # bugs-nyu.github.io
 
