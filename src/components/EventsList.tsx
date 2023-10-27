@@ -8,27 +8,13 @@ interface EventsListProps {
   count?: number;
 }
 
-const monthNames = [
-  'January',
-  'February',
-  'March',
-  'April',
-  'May',
-  'June',
-  'July',
-  'August',
-  'September',
-  'October',
-  'November',
-  'December',
-];
-
 const getDateText = (event: Event) => {
-  const month = monthNames[event.date.getMonth()];
-  const day = event.date.getDate();
-  const year = event.date.getFullYear();
-  const time = `${event.startTime} - ${event.endTime}`;
-  return `${month} ${day}, ${year} at ${time}`;
+  const day = Intl.DateTimeFormat(undefined, {
+    month: 'long',
+    day: 'numeric',
+    year: 'numeric',
+  }).format(event.date);
+  return `${day} at ${event.startTime} - ${event.endTime}`;
 };
 
 const EventsList = ({ events, count }: EventsListProps) => {
