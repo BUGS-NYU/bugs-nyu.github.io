@@ -4,9 +4,6 @@ import React, { useState, useEffect } from 'react';
 import Button from './Button';
 import { useThemeContext } from './utils';
 
-type NavBarElement = React.ElementRef<'header'>;
-type NavBarProps = React.ComponentPropsWithoutRef<'header'>;
-
 const NAV_LINKS = [
   { to: '/about', value: 'About us' },
   { to: '/projects', value: 'Projects' },
@@ -14,7 +11,7 @@ const NAV_LINKS = [
   { to: '/alumni', value: 'Alumni' },
 ];
 
-const NavBar = React.forwardRef<NavBarElement, NavBarProps>(({ ...restProps }) => {
+function NavBar() {
   const { currentTheme, toggleCurrentTheme } = useThemeContext();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
@@ -29,7 +26,7 @@ const NavBar = React.forwardRef<NavBarElement, NavBarProps>(({ ...restProps }) =
   const toggleMobileMenu = () => setIsMobileMenuOpen((prev) => !prev);
 
   return (
-    <header {...restProps}>
+    <header>
       <nav className='flex max-w-5xl mx-auto items-center justify-between flex-wrap p-8'>
         <div className='flex items-center flex-shrink-0'>
           <Link to='/' className='text-xl font-bold dark:text-stone-100'>
@@ -71,7 +68,7 @@ const NavBar = React.forwardRef<NavBarElement, NavBarProps>(({ ...restProps }) =
       </nav>
     </header>
   );
-});
+}
 
 NavBar.displayName = 'NavBar';
 
