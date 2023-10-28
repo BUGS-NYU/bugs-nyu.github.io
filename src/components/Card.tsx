@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import React from 'react';
 
-type CardElement = React.ElementRef<'a'>;
-type CardProps = React.ComponentPropsWithoutRef<'a'> & {
+type CardProps = {
+  children: React.ReactNode;
   size?: 'small' | 'normal' | 'large';
   radius?: 'small' | 'normal' | 'large';
   shadow?: 'none' | 'normal';
@@ -10,7 +10,7 @@ type CardProps = React.ComponentPropsWithoutRef<'a'> & {
 };
 
 const classes = {
-  base: 'bg-white border-gray-300 border dark:bg-neutral-900 dark:border-neutral-700 cursor-pointer hover:bg-gray-200 dark:hover:bg-neutral-800 transition-colors', // Add cursor-pointer for pointer cursor, hover:bg-gray-200 for hover effect, and transition-colors for smooth color transition
+  base: 'bg-white border-gray-300 border dark:bg-neutral-900 dark:border-neutral-700 hover:bg-gray-200 dark:hover:bg-neutral-800 transition-colors',
   size: {
     small: 'p-4 text-sm',
     normal: 'p-8',
@@ -27,38 +27,24 @@ const classes = {
   },
 };
 
-const Card = React.forwardRef<CardElement, CardProps>(
-  (
-    {
-      children,
-      className,
-      size = 'normal',
-      radius = 'normal',
-      shadow = 'none',
-      link,
-      ...restProps
-    },
-    forwardedRef,
-  ) => {
-    return (
-      <a
-        href={link}
-        target='_blank'
-        className={classNames(
-          classes.base,
-          classes.size[size],
-          classes.radius[radius],
-          classes.shadow[shadow],
-          className,
-        )}
-        {...restProps}
-        ref={forwardedRef}
-      >
-        {children}
-      </a>
-    );
-  },
-);
+function Card({ children, size = 'normal', radius = 'normal', shadow = 'none', link }: CardProps) {
+  const className = classNames(
+    classes.base,
+    classes.size[size],
+    classes.radius[radius],
+    classes.shadow[shadow],
+  );
+  
+  if (link === undefined) {
+    return <div className={className}>{children}</div>;
+  }
+  
+  return (
+    <a href={link} target='_blank' rel='noreferrer' className={className}>
+      {children}
+    </a>
+  );
+}
 
 Card.displayName = 'Card';
 
