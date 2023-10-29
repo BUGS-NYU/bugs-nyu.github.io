@@ -1,13 +1,13 @@
 import * as React from 'react';
-import { Event, events } from '../data/events';
+import { Event, EVENTS } from '../data/events';
 import type { HeadFC, PageProps } from 'gatsby';
 import Layout from '../components/Layout';
 import EventsList from '../components/EventsList';
 
 const EventsPage: React.FC<PageProps> = () => {
   const currDate = new Date().setHours(0, 0, 0, 0);
-  const upcomingEvents = events.filter(({ date }: Event) => date.getTime() >= currDate);
-  const pastEvents = events.filter(({ date }: Event) => date.getTime() < currDate);
+  const upcomingEvents = EVENTS.filter(({ date }: Event) => date.getTime() >= currDate);
+  const pastEvents = EVENTS.filter(({ date }: Event) => date.getTime() < currDate);
 
   return (
     <Layout>

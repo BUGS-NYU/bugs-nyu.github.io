@@ -4,11 +4,11 @@ import Button from '../components/Button';
 import Layout from '../components/Layout';
 import BugsLogo from '../svgs/bugs.svg';
 import EventsList from '../components/EventsList';
-import { events, Event } from '../data/events';
+import { EVENTS, Event } from '../data/events';
 import { ArrowRight } from 'iconoir-react';
 
 const currDate = new Date().setHours(0, 0, 0, 0);
-const upcomingEvents = events.filter(({ date }: Event) => date.getTime() >= currDate);
+const upcomingEvents = EVENTS.filter(({ date }: Event) => date.getTime() >= currDate);
 
 const IndexPage: React.FC<PageProps> = () => (
   <Layout>

@@ -4,7 +4,7 @@ export interface Alumni {
   description: string;
 }
 
-export const alumni: Alumni[] = [
+export const ALUMNI: Alumni[] = [
   {
     name: 'Khanh Nguyen',
     graduation: 2022,

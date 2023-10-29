@@ -4,7 +4,7 @@ export interface TeamMember {
   profileImg: string;
 }
 
-export const team: TeamMember[] = [
+export const TEAM: TeamMember[] = [
   {
     name: 'Aneesh Maganti',
     description:

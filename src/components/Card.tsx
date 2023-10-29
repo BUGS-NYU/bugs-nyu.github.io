@@ -34,11 +34,11 @@ function Card({ children, size = 'normal', radius = 'normal', shadow = 'none', l
     classes.radius[radius],
     classes.shadow[shadow],
   );
-  
+
   if (link === undefined) {
     return <div className={className}>{children}</div>;
   }
-  
+
   return (
     <a href={link} target='_blank' rel='noreferrer' className={className}>
       {children}

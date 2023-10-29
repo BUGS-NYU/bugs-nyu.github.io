@@ -2,7 +2,7 @@ import * as React from 'react';
 import { graphql, HeadFC, PageProps, useStaticQuery } from 'gatsby';
 import Layout from '../components/Layout';
 import Card from '../components/Card';
-import { team, TeamMember } from '../data/team';
+import { TEAM, TeamMember } from '../data/team';
 
 const TeamMemberCard: React.FC<TeamMember> = ({ name, description, profileImg }) => (
   <Card shadow='none'>
@@ -53,7 +53,7 @@ const AboutPage: React.FC<PageProps> = () => {
         </p>
         <h2 className='mt-12 text-4xl font-bold'>Executive Board</h2>
         <div className='mt-4 grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3'>
-          {team.map((teamMember) => (
+          {TEAM.map((teamMember) => (
             <TeamMemberCard key={teamMember.name} {...teamMember} />
           ))}
         </div>

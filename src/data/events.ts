@@ -8,7 +8,7 @@ export interface Event {
   cover: string;
 }
 
-export const events: Event[] = [
+export const EVENTS: Event[] = [
   {
     title: 'Meet and Greet',
     description: 'Join us and learn about what BUGS@NYU is and meet the e-board!',

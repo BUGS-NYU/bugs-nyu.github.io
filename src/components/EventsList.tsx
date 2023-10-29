@@ -14,7 +14,7 @@ const getDateText = (event: Event) => {
     day: 'numeric',
     year: 'numeric',
   }).format(event.date);
-  
+
   return `${day} at ${event.startTime} - ${event.endTime}`;
 };
 

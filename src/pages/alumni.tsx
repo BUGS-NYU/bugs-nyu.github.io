@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { HeadFC, PageProps } from 'gatsby';
 import Layout from '../components/Layout';
-import { alumni } from '../data/alumni';
+import { ALUMNI } from '../data/alumni';
 
 const AlumniPage: React.FC<PageProps> = () => {
-  const alumniDesc = alumni.sort((a, b) => (a.graduation < b.graduation ? 1 : -1));
+  const alumniDesc = ALUMNI.sort((a, b) => (a.graduation < b.graduation ? 1 : -1));
 
   return (
     <Layout>
