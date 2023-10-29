@@ -18,15 +18,15 @@ const ProjectsPage: React.FC<PageProps> = () => (
       </p>
 
       <div className='mt-12 grid grid-cols-1 gap-4 md:grid-cols-2'>
-        {PROJECTS.map(({ name, summary, description, url }) => (
-          <Card key={name} shadow='normal' link='https://nyusyllabi.com/'>
+        {PROJECTS.map(({ name, summary, description, url, githubUrl }) => (
+          <Card key={name} shadow='normal' link={url}>
             <div className='h-full flex flex-col'>
               <h2 className='text-xl font-bold'>{name}</h2>
               <p className='text-violet-600'>{summary}</p>
               <p className='grow mt-4'>{description}</p>
               <a
                 className='mt-6 justify-self-end'
-                href={url}
+                href={githubUrl}
                 target='_blank'
                 rel='noopener noreferrer'
               >
