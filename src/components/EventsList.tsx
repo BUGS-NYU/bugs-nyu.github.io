@@ -20,9 +20,6 @@ const getDateText = (event: Event) => {
 
 const EventsList = ({ events, count }: EventsListProps) => {
   events = events.slice(0, count);
-  events = events.sort((a, b) => {
-    return a.date.getTime() - b.date.getTime();
-  });
   if (events.length === 0) return null;
 
   return (
