@@ -6,8 +6,12 @@ import EventsList from '../components/EventsList';
 
 const EventsPage: React.FC<PageProps> = () => {
   const currDate = new Date().setHours(0, 0, 0, 0);
-  const upcomingEvents = EVENTS.filter(({ date }: Event) => date.getTime() >= currDate);
-  const pastEvents = EVENTS.filter(({ date }: Event) => date.getTime() < currDate);
+  const upcomingEvents = EVENTS.filter(({ date }: Event) => date.getTime() >= currDate).sort(
+    (a: Event, b: Event) => a.date.getTime() - b.date.getTime(),
+  );
+  const pastEvents = EVENTS.filter(({ date }: Event) => date.getTime() < currDate).sort(
+    (a: Event, b: Event) => b.date.getTime() - a.date.getTime(),
+  );
 
   return (
     <Layout>
