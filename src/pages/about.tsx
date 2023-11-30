@@ -4,12 +4,13 @@ import Layout from '../components/Layout';
 import Card from '../components/Card';
 import { TEAM, TeamMember } from '../data/team';
 
-const TeamMemberCard: React.FC<TeamMember> = ({ name, description, profileImg }) => (
+const TeamMemberCard: React.FC<TeamMember> = ({ name, description, profileImg, role }) => (
   <Card shadow='none'>
     <div className='-m-8 mb-0'>
       <img className='w-full h-64 rounded-t-lg object-cover' src={profileImg} alt='' />
     </div>
     <h3 className='mt-6 text-xl font-bold'>{name}</h3>
+    <h3 className=' text-xl'>{role}</h3>
     <p className='mt-2'>{description}</p>
   </Card>
 );
