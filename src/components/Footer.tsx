@@ -1,10 +1,11 @@
 import React from 'react';
-import { Discord, GitHub, Mail } from 'iconoir-react';
+import { Discord, GitHub, Mail, Instagram } from 'iconoir-react';
 
 const SOCIAL_ICONS = [
   { to: 'https://github.com/BUGS-NYU', getMark: () => <GitHub /> },
   { to: 'https://discord.com/invite/75jgtXy7rz', getMark: () => <Discord /> },
   { to: 'mailto:bugsnyu@gmail.com', getMark: () => <Mail /> },
+  { to: 'https://www.instagram.com/bugsnyu/', getMark: () => <Instagram /> },
 ];
 
 function Footer() {
