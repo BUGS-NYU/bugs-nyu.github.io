@@ -14,11 +14,11 @@ export const TEAM: TeamMember[] = [
     role: 'President',
   },
   {
-    name: 'Calvin Tian',
+    name: 'Alex Ying',
     description:
-      'Calvin is a senior studying CS at Tandon. Born in California, he enjoys automation and cats 😺!',
-    profileImg: '/images/team/calvin.jpg',
-    role: 'Project Lead',
+      'Alex is a Junior studying CS in Tandon. He enjoys skiing, rock climbing, and learning about cool algorithms. He is currently teaching himself how to cook (with mixed results).',
+    profileImg: '/images/team/alex.jpg',
+    role: 'Lead Event Coordinator',
   },
   {
     name: 'Laurel Xiang',
