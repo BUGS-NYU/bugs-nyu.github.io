@@ -10,7 +10,7 @@ export const TEAM: TeamMember[] = [
     name: 'Abigal Zhou',
     description:
       'Abigail is a junior majoring in CS at CAS with an interest in operating systems and machine learning. She’s currently exploring the fintech space and enjoys trying new restaurants and running in her free time!',
-    profileImg: '/images/team/aneesh.jpg',
+    profileImg: '/images/team/abigal.jpg',
     role: 'President',
   },
   {
