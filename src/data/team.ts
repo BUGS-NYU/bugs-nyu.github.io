@@ -7,7 +7,7 @@ export interface TeamMember {
 
 export const TEAM: TeamMember[] = [
   {
-    name: 'Aneesh Maganti',
+    name: 'Abigal Zhou',
     description:
       'Aneesh is a senior studying CS at Tandon. He really enjoys contributing to and playing with emulators, rock climbing, and occasionally doing music production 🦔.',
     profileImg: '/images/team/aneesh.jpg',
