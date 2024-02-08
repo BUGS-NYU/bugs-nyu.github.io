@@ -10,6 +10,15 @@ export interface Event {
 
 export const EVENTS: Event[] = [
   {
+    title: 'BUGS Kickoff Event',
+    description: 'Get to know your new eBoard through their favorite open source tools and feel free to share/promote your own!',
+    date: new Date('February 9, 2024'),
+    startTime: '5 PM',
+    endTime: '6 PM',
+    location: 'WWH Room 101',
+    cover: 'images/events/tbd',
+  },
+  {
     title: 'Meet and Greet',
     description: 'Join us and learn about what BUGS@NYU is and meet the e-board!',
     date: new Date('February 17, 2023'),
