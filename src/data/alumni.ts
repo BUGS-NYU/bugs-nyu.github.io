@@ -21,7 +21,7 @@ export const ALUMNI: Alumni[] = [
     name: 'Sonia Jain',
     graduation: 2022,
     description:
-      "Sonia double majored in Computer Science and Media, Culture, and Communications. She is interested in game design, art, and I love animals. In her free time, Sonia works with a variety of organizations to help find dogs and cats' homes. She also loves painting and digital art so when she is not working with animals, she is creating. Sonia was the former director of marketing & communications.",
+      "Sonia double majored in Computer Science and Media, Culture, and Communications. She is interested in game design, art, and loves animals. In her free time, Sonia works with a variety of organizations to help find dogs and cats' homes. She also loves painting and digital art so when she is not working with animals, she is creating. Sonia was the former director of marketing & communications.",
   },
   {
     name: 'Bruce Jiang',
