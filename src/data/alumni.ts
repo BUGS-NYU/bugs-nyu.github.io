@@ -8,7 +8,7 @@ export const ALUMNI: Alumni[] = [
   {
     name: 'Calvin Tian',
     graduation: 2024,
-    description: 'Calvin is a senior studying CS at Tandon. Born in California, he enjoys automation and cats 😺!
+    description: 'Calvin was Project Lead. He is a senior studying CS at Tandon. Born in California, he enjoys automation and cats 😺!
   }
   {
     name: 'Aneesh Maganti',
