@@ -10,7 +10,7 @@ export const ALUMNI: Alumni[] = [
     graduation: 2024,
     description:
       'Aneesh was BUGS President. He is a senior studying CS at Tandon. He really enjoys contributing to and playing with emulators, rock climbing, and occasionally doing music production 🦔.'
-  }
+  },
   {
     name: 'Khanh Nguyen',
     graduation: 2022,
