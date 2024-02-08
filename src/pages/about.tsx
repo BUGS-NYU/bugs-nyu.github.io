@@ -5,9 +5,9 @@ import Card from '../components/Card';
 import { TEAM, TeamMember } from '../data/team';
 
 const TeamMemberCard: React.FC<TeamMember> = ({ name, description, profileImg, role }) => (
-  <Card shadow='none'>
-    <div className='flex justify-center items-center mb-0'>
-      <img className='w-full h-64 rounded-t-lg object-cover' src={profileImg} alt='' />
+  <Card shadow='none'  className='flex flex-col items-center'>
+    <div className='w-full h-64 overflow-hidden rounded-t-lg'>
+      <img className='w-full h-full object-cover' src={profileImg} alt='' />
     </div>
     <h3 className='mt-6 text-xl font-bold'>{name}</h3>
     <h3 className=' text-xl'>{role}</h3>
