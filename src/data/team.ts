@@ -31,7 +31,7 @@ export const TEAM: TeamMember[] = [
     name: 'Sewon Kim',
     description:
       'As a passionate musician who has been composing and performing on the clarinet from an early age, Sewon has a great interest in the art of creation. For this reason, Sewon believes that computer science means more than simple coding as it is a form of art, built of inspirations and innovations.',
-    profileImg: '/images/team/abigal.jpg',
+    profileImg: '/images/team/sewon.jpg',
     role: 'Website Designer',
   },
   {
