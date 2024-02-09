@@ -11,7 +11,7 @@ export interface Event {
 export const EVENTS: Event[] = [
   {
     title: 'BUGS Kickoff Event',
-    description: 'Get to know your new eBoard through their favorite open source tools',
+    description: 'Get to know your new eBoard through their favorite open source tools!',
     date: new Date('February 9, 2024'),
     startTime: '5 PM',
     endTime: '6 PM',
