@@ -56,7 +56,7 @@ export const ALUMNI: Alumni[] = [
   },
   {
     name: 'Bruce Jiang',
-    graduation: 0,
+    graduation: 2022,
     description:
       'Bruce is from China and studied Computer Science and Mathematics. Outside of class, he is crazy in soccer (especially in Chelsea) and basketball. He spends tons of time playing FIFA (most of the time playing Chelsea). Besides, he likes listening to music, reading about history, and travelling. Bruce was the former secretary.',
   },
@@ -110,7 +110,7 @@ export const ALUMNI: Alumni[] = [
   },
   {
     name: 'Shelly Cao',
-    graduation: 0,
+    graduation: 2021,
     description:
       "Shelly Cao was BUGS' Director of Outreach in 2019 and majored in Computer Science with minors in Math and Business Study. She comes from a small city in China called Jingzhou and even her Chinese friends are clueless as to where it is. In her free time, she loves to explore the different boroughs in the city and try food from different cultures.",
   },
