@@ -33,6 +33,7 @@ export const TEAM: TeamMember[] = [
       'Phil is a Freshman, Studying CS at CAS',
     profileImg: '/images/team/phil.jpg',
     role: 'Event Coordinator',
+  },
   {
     name: 'Sewon Kim',
     description:
