@@ -19,6 +19,15 @@ export const EVENTS: Event[] = [
     cover: '/images/events/bugs.jpg',
   },
   {
+    title: 'Tech Fest',
+    description:'A night for connecting, networking, and learning everything tech alongside several other amazing tech clubs (Tech @ NYU | Print3D @ NYU | Girls Who Code | Product Management Club | Women in Computing)',
+    date: new Date('February 21, 2024'),
+    startTime: '5:30 PM'
+    endTime: '7 PM',
+    location: 'Kimmel Center, Eisner & Lubin Auditorium',
+    cover: '/images/events/techfest.jpg',
+  },
+  {
     title: 'Meet and Greet',
     description: 'Join us and learn about what BUGS@NYU is and meet the e-board!',
     date: new Date('February 17, 2023'),
