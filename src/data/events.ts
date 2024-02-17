@@ -22,7 +22,7 @@ export const EVENTS: Event[] = [
     title: 'Tech Fest',
     description:'A night for connecting, networking, and learning everything tech alongside several other amazing tech clubs (Tech @ NYU | Print3D @ NYU | Girls Who Code | Product Management Club | Women in Computing)',
     date: new Date('February 21, 2024'),
-    startTime: '5:30 PM'
+    startTime: '5:30 PM',
     endTime: '7 PM',
     location: 'Kimmel Center, Eisner & Lubin Auditorium',
     cover: '/images/events/techfest.jpg',
