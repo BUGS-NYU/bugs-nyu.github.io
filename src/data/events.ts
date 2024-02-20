@@ -34,7 +34,7 @@ export const EVENTS: Event[] = [
     startTime: '5:30 PM',
     endTime: '7 PM',
     location: 'Kimmel Center, Eisner & Lubin Auditorium',
-    cover: '/images/events/techfest.jpg',
+    cover: '/images/events/techfest1.jpg',
   },
   {
     title: 'Meet and Greet',
