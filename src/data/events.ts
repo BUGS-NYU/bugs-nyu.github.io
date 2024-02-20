@@ -26,7 +26,7 @@ export const EVENTS: Event[] = [
     endTime: '6:30 PM',
     location: 'WWH Room 101',
     cover: '/images/events/anubis.jpg',
-  }
+  },
   {
     title: 'Tech Fest',
     description:'A night for connecting, networking, and learning everything tech alongside several other amazing tech clubs (Tech @ NYU | Print3D @ NYU | Girls Who Code | Product Management Club | Women in Computing)',
