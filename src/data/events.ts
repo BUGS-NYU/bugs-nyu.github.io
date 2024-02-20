@@ -19,6 +19,15 @@ export const EVENTS: Event[] = [
     cover: '/images/events/bugs.jpg',
   },
   {
+    title: 'BUGS x Anubis',
+    description: 'meet with the founder of Anubis, John Cuniff, to learn more about the role of OpenSource!',
+    date: new Date('February 23, 2024'),
+    startTime: '5 PM',
+    endTime: '6:30 PM',
+    location: 'WWH Room 101',
+    cover: '/images/events/anubis.jpg',
+  }
+  {
     title: 'Tech Fest',
     description:'A night for connecting, networking, and learning everything tech alongside several other amazing tech clubs (Tech @ NYU | Print3D @ NYU | Girls Who Code | Product Management Club | Women in Computing)',
     date: new Date('February 21, 2024'),
