@@ -17,7 +17,7 @@ export const TEAM: TeamMember[] = [
     name: 'Alex Ying',
     description:
       'Alex Ying is a Junior studying CS in Tandon. He enjoys skiing, rock climbing, and learning about cool algorithms. He is currently teaching himself how to cook (with mixed results).',
-    profileImg: '/images/team/alexy.jpg',
+    profileImg: '/images/team/alexyi.jpg',
     role: 'Lead Event Coordinator',
   },
   {
