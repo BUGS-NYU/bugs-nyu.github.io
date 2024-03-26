@@ -16,7 +16,7 @@ export const EVENTS: Event[] = [
     startTime: '4 PM',
     endTime: '6 PM',
     location: 'WWH Room 101',
-    cover: 'images/events/bugsxgoogle.jpg',
+    cover: 'images/events/bugssxgoogle.jpg',
   },
   {
     title: 'BUGS Kickoff Event',
