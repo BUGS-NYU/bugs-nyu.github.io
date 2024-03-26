@@ -14,7 +14,7 @@ export const EVENTS: Event[] = [
     description: 'learn about open source security and AI from a Google staff engineer!',
     date: new Date('March 19, 2024'),
     startTime: '4 PM',
-    endTime '6 PM',
+    endTime: '6 PM',
     location: 'WWH Room 101'
     cover: 'images/events/bugsxgoogle.jpg',
   },
