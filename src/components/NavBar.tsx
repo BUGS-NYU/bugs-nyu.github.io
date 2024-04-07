@@ -15,6 +15,7 @@ function NavBar() {
   const { currentTheme, toggleCurrentTheme } = useThemeContext();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
 
+  // close nav links menu on browser resize
   useEffect(() => {
     const handleResize = () => setIsMobileMenuOpen(false);
     window.addEventListener('resize', handleResize);
@@ -28,16 +29,21 @@ function NavBar() {
   return (
     <header>
       <nav className='flex max-w-5xl mx-auto items-center justify-between flex-wrap p-8'>
+        {/* BUGS Icon */}
         <div className='flex items-center flex-shrink-0'>
           <Link to='/' className='text-xl font-bold dark:text-stone-100'>
             BUGS
           </Link>
         </div>
+
+        {/* Open/Close Mobile Menu */}
         <div className='block md:hidden'>
           <button className='flex w-10 h-10 items-center justify-center' onClick={toggleMobileMenu}>
             {isMobileMenuOpen ? <Cancel /> : <Menu />}
           </button>
         </div>
+
+        {/* Nav Links (for mobile & desktop) */}
         <div
           className={`${
             isMobileMenuOpen ? 'h-44' : 'h-0'
@@ -54,6 +60,8 @@ function NavBar() {
               </Link>
             ))}
           </div>
+
+          {/* Join Button & Light/Dark Toggle */}
           <div className='md:flex md:flex-row gap-2'>
             <a href='https://discord.gg/75jgtXy7rz'>
               <Button variant='secondary' className='px-6'>
