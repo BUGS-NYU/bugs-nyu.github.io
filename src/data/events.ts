@@ -6,6 +6,7 @@ export interface Event {
   endTime: string;
   location: string;
   cover: string;
+  imgsList?: string[];
 }
 
 export const EVENTS: Event[] = [
@@ -17,6 +18,13 @@ export const EVENTS: Event[] = [
     endTime: '6 PM',
     location: 'WWH Room 101',
     cover: '/images/events/bugssxgoogle.jpg',
+    imgsList: ['/images/events-pictures/google/1.jpg',
+    '/images/events-pictures/google/2.jpg',
+    '/images/events-pictures/google/3.jpg',
+    '/images/events-pictures/google/4.jpg',
+    '/images/events-pictures/google/5.jpg',
+    '/images/events-pictures/google/6.jpg'
+    ],
   },
   {
     title: 'BUGS Kickoff Event',
@@ -35,6 +43,14 @@ export const EVENTS: Event[] = [
     endTime: '6:30 PM',
     location: 'WWH Room 101',
     cover: '/images/events/anubis.jpg',
+    imgsList: ['/images/events-pictures/anubis/1.jpg',
+    '/images/events-pictures/anubis/2.jpg',
+    '/images/events-pictures/anubis/3.jpg',
+    '/images/events-pictures/anubis/4.jpg',
+    '/images/events-pictures/anubis/5.jpg',
+    '/images/events-pictures/anubis/6.jpg',
+    '/images/events-pictures/anubis/7.jpg'
+    ]
   },
   {
     title: 'Tech Fest',
