@@ -8,7 +8,7 @@ interface EventsListProps {
   count?: number;
 }
 
-const getDateText = (event: Event) => {
+export const getDateText = (event: Event) => {
   const day = Intl.DateTimeFormat(undefined, {
     month: 'long',
     day: 'numeric',

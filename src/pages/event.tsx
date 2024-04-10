@@ -2,6 +2,9 @@ import * as React from 'react';
 import { Event, EVENTS } from '../data/events';
 import type { HeadFC, PageProps } from 'gatsby';
 import Layout from '../components/Layout';
+import { Clock, PinAlt } from 'iconoir-react';
+import { getDateText } from '../components/EventsList';
+import Slider from '../components/Slider';
 
 const EventsPage: React.FC<PageProps> = ({ location }) => {
     // get event index via query var
@@ -17,7 +20,26 @@ const EventsPage: React.FC<PageProps> = ({ location }) => {
     return (
         <Layout>
             <div className='max-w-5xl mx-auto px-8 flex flex-col py-8'>
-                <h1> {JSON.stringify(event)} </h1>
+                <h1 className='text-2xl'> {event.title} </h1>
+
+                <ul className='text-zinc-600 dark:text-zinc-400 m-3'>
+                    <li className='my-2 flex gap-x-2'>
+                        <Clock className='flex-shrink-0 inline-block' />
+                        {getDateText(event)}
+                    </li>
+                    <li className='my-2 flex gap-x-2'>
+                        <PinAlt className='flex-shrink-0 inline-block' />
+                        {event.location}
+                    </li>
+                </ul>
+
+                <p className="mb-5"> {event.description} </p>
+
+                <Slider>
+                    <p> Img1 </p>
+                    <p> Img2 </p>
+                    <p> Img3 </p>
+                </Slider>
             </div>
         </Layout>
     );
