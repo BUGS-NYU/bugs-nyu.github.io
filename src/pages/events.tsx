@@ -5,11 +5,13 @@ import Layout from '../components/Layout';
 import EventsList from '../components/EventsList';
 
 const EventsPage: React.FC<PageProps> = () => {
+  // assign event indices for id, split to past & upcoming events
   const currDate = new Date().setHours(0, 0, 0, 0);
-  const upcomingEvents = EVENTS.filter(({ date }: Event) => date.getTime() >= currDate).sort(
+  const eventsWithIndices = EVENTS.map((event, eventIndex) => ({ ...event, eventIndex }));
+  const upcomingEvents = eventsWithIndices.filter(({ date }: Event) => date.getTime() >= currDate).sort(
     (a: Event, b: Event) => a.date.getTime() - b.date.getTime(),
   );
-  const pastEvents = EVENTS.filter(({ date }: Event) => date.getTime() < currDate).sort(
+  const pastEvents = eventsWithIndices.filter(({ date }: Event) => date.getTime() < currDate).sort(
     (a: Event, b: Event) => b.date.getTime() - a.date.getTime(),
   );
 

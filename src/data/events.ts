@@ -7,6 +7,7 @@ export interface Event {
   location: string;
   cover: string;
   imgsList?: string[];
+  eventIndex?: number;
 }
 
 export const EVENTS: Event[] = [
