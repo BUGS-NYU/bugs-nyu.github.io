@@ -10,7 +10,7 @@ type CardProps = {
 };
 
 const classes = {
-  base: 'bg-white border-gray-300 border dark:bg-neutral-900 dark:border-neutral-700 hover:bg-gray-200 dark:hover:bg-neutral-800 transition-colors',
+  base: 'group bg-white border-gray-300 border dark:bg-neutral-900 dark:border-neutral-700 hover:bg-gray-200 dark:hover:bg-neutral-800 transition-colors',
   size: {
     small: 'p-4 text-sm',
     normal: 'p-8',

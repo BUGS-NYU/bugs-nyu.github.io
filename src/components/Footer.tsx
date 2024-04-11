@@ -17,7 +17,7 @@ function Footer() {
           <p>NYU’s premier open source club</p>
           <div className='flex flex-row gap-x-4'>
             {SOCIAL_ICONS.map(({ to, getMark }) => (
-              <a key={to} href={to} target='_blank' rel='noopener noreferrer'>
+              <a className='hover:scale-110' key={to} href={to} target='_blank' rel='noopener noreferrer'>
                 {getMark()}
               </a>
             ))}
@@ -26,7 +26,7 @@ function Footer() {
         <p>
           <a
             href='https://discord.com/invite/75jgtXy7rz'
-            className='text-purple-400 font-bold'
+            className='text-purple-400 font-bold hover:text-pink-200'
             target='_blank'
             rel='noopener noreferrer'
           >
