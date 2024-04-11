@@ -48,7 +48,7 @@ function NavBar() {
         {/* Nav Links (for mobile & desktop) */}
         <div
           className={`${
-            isMobileMenuOpen ? 'h-44' : 'h-0'
+            isMobileMenuOpen ? '' : 'h-0'
           } w-full block truncate flex-grow mt-2 transition-height duration-100 md:mt-0 md:flex md:items-center md:w-auto md:h-auto`}
         >
           <div className='md:flex md:flex-row md:flex-grow md:space-x-12 md:justify-center'>
@@ -64,7 +64,7 @@ function NavBar() {
           </div>
 
           {/* Join Button & Light/Dark Toggle */}
-          <div className='md:flex md:flex-row gap-2'>
+          <div className='flex flex-row gap-2'>
             <a href='https://discord.gg/75jgtXy7rz'>
               <Button variant='secondary' className='px-6'>
                 Join
