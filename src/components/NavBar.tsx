@@ -38,7 +38,9 @@ function NavBar() {
 
         {/* Open/Close Mobile Menu */}
         <div className='block md:hidden'>
-          <button className='flex w-10 h-10 items-center justify-center' onClick={toggleMobileMenu}>
+          <button 
+            className={`${currentTheme === "light" ? "text-black" : "text-white"} flex w-10 h-10 items-center justify-center`}
+            onClick={toggleMobileMenu}>
             {isMobileMenuOpen ? <Cancel /> : <Menu />}
           </button>
         </div>
