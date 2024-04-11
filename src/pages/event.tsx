@@ -17,6 +17,10 @@ const EventsPage: React.FC<PageProps> = ({ location }) => {
     // get event data
     const event = EVENTS[index];
 
+    if (!event.imgsList) {
+        return <Layout> <h1> Error: Invalid event - images not found </h1> </Layout>;
+    }
+
     return (
         <Layout>
             <div className='max-w-5xl mx-auto px-8 flex flex-col py-8'>
@@ -36,9 +40,12 @@ const EventsPage: React.FC<PageProps> = ({ location }) => {
                 <p className="mb-5"> {event.description} </p>
 
                 <Slider>
-                    <p> Img1 </p>
-                    <p> Img2 </p>
-                    <p> Img3 </p>
+                    {event.imgsList.map((imgSrc, imgIndex) => 
+                    <img
+                        src={imgSrc}
+                        width="100%" height="auto"
+                        key={imgIndex}
+                    />)}
                 </Slider>
             </div>
         </Layout>
