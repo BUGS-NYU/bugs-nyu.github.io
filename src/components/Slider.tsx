@@ -31,7 +31,7 @@ function Slider({ children }: SliderProps) {
                     return;
                 }
                 setSliderIndex(sliderIndex - 1);
-            }}> <NavArrowLeft width={80} height={140} /> </button>
+            }}> <NavArrowLeft width={50} height={80} /> </button>
 
         {/* Right Button */}
         <button className="absolute right-0 top-1/2 border-2 border-r-0 border-white rounded-l-xl -translate-y-1/2 hover:bg-opacity-[0.3] hover:bg-white"
@@ -43,7 +43,7 @@ function Slider({ children }: SliderProps) {
                     return;
                 }
                 setSliderIndex(sliderIndex + 1);
-            }}> <NavArrowRight width={80} height={140} /> </button>
+            }}> <NavArrowRight width={50} height={80} /> </button>
     </div>);
 }
 
