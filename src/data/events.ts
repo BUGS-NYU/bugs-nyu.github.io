@@ -10,6 +10,15 @@ export interface Event {
 
 export const EVENTS: Event[] = [
   {
+    title: 'BUGS x Girls Who Code SQL Workshop',
+    description: 'learn about the basics of SQL query and create an employee check-in system! free food, drinks, and database knowledge',
+    date: new Date('April 9, 2024'),
+    startTime: '5 PM',
+    endTime: '6:30 PM',
+    location: 'WWH Room 101',
+    cover: '/images/events/bugs_x_girls_who_code.png',
+  }
+  {
     title: 'BUGS x Google',
     description: 'learn about open source security and AI from a Google staff engineer!',
     date: new Date('March 19, 2024'),
