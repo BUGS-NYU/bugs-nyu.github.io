@@ -14,7 +14,7 @@ export const EVENTS: Event[] = [
   {
     title: 'BUGS x Girls Who Code SQL Workshop',
     description: 'learn about the basics of SQL query and create an employee check-in system! free food, drinks, and database knowledge',
-    date: new Date('April 9, 2024'),
+    date: new Date('April 19, 2024'),
     startTime: '5 PM',
     endTime: '6:30 PM',
     location: 'WWH Room 101',
