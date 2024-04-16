@@ -19,7 +19,7 @@ export const EVENTS: Event[] = [
     endTime: '6:30 PM',
     location: 'WWH Room 101',
     cover: '/images/events/bugs_x_girls_who_code.png',
-  }
+  },
   {
     title: 'BUGS x Google',
     description: 'learn about open source security and AI from a Google staff engineer!',
