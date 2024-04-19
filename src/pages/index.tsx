@@ -44,10 +44,20 @@ const IndexPage: React.FC<PageProps> = () => (
       </div>
     </div>
 
-    <div className='max-w-5xl mx-auto px-8 flex flex-col py-24 lg:py-28'>
-      <p className='text-violet-600 font-bold'>Join Us</p>
-      <h2 className='mt-2 text-4xl font-bold'>Upcoming Events</h2>
-      <p className='mt-4 mb-12'>Take part in any of our upcoming events and workshops!</p>
+
+    <div className='max-w-5xl mx-auto px-8 flex-col py-24 lg:py-28'>
+      <div className='items-center flex'>
+        <div className=''>
+          <p className='text-violet-600 font-bold'>Join Us</p>
+          <h2 className='mt-2 text-4xl font-bold'>Upcoming Events</h2>
+          <p className='mt-4 mb-12'>Take part in any of our upcoming events and workshops!</p>
+        </div>
+        <div className='hidden md:block h-80 w-80 ml-60'>
+          <div className='object-contain'>
+            <img src='/images/logo/feature.png' />
+          </div>
+        </div>
+      </div>
       <EventsList events={upcomingEvents} count={2} />
       <div className='mt-8 flex justify-center'>
         <Link to='/events'>
