@@ -1,12 +1,14 @@
 export interface Event {
   title: string;
   description: string;
+  shortDescription?: string;
   date: Date;
   startTime: string;
   endTime: string;
   location: string;
   cover: string;
   imgsList?: string[];
+  imgsText?: string[];
   eventIndex?: number;
 }
 
@@ -14,9 +16,7 @@ export const EVENTS: Event[] = [
   {
     title: 'BUGS x Girls Who Code SQL Workshop',
     description: 'learn about the basics of SQL query and create an employee check-in system! free food, drinks, and database knowledge',
-    shortdescription: "BUGS collaborated with Girls Who Code to host a workshop on SQL (Structure Query Language). Girls Who Code led the workshop as everyone created their own mini queries with CRUD operations. SQL is a language used for relational database management. It helps with data manipulation, data definition, and data control. Everyone enjoyed buns from Mei Lai Wah.",
-    "link to slides: " ,
-    " - https://docs.google.com/presentation/d/1QWiyGfHQuIhohpCukL8Fi_YWNK4MhjS-5OCRb_1eQxo/edit?usp=sharing ",
+    shortDescription: "BUGS collaborated with Girls Who Code to host a workshop on SQL (Structure Query Language). Girls Who Code led the workshop as everyone created their own mini queries with CRUD operations. SQL is a language used for relational database management. It helps with data manipulation, data definition, and data control. Everyone enjoyed buns from Mei Lai Wah.<br>Link to slides: <a href='https://docs.google.com/presentation/d/1QWiyGfHQuIhohpCukL8Fi_YWNK4MhjS-5OCRb_1eQxo/edit?usp=sharing'> Slides </a>",
     date: new Date('April 19, 2024'),
     startTime: '5 PM',
     endTime: '6:30 PM',
@@ -26,10 +26,7 @@ export const EVENTS: Event[] = [
   {
     title: 'BUGS x Google',
     description: 'learn about open source security and AI from a Google staff engineer!',
-    shortdescription: 'Johnathon Metzam, a security engineer at Google shared his insights on open-source security and applying AI to security. He also shared some of his contributions to FuzzBench, a service that evaluates fuzz testing tools on a Google scale.',
-    'helpful links: ',
-    ' - https://github.com/jonathanmetzman',
-    ' - https://github.com/AnubisLMS',
+    shortDescription: "Johnathon Metzam, a security engineer at Google shared his insights on open-source security and applying AI to security. He also shared some of his contributions to FuzzBench, a service that evaluates fuzz testing tools on a Google scale. Helpful links: <a href='https://github.com/jonathanmetzman'> Github </a> <a href='https://github.com/AnubisLMS'> </a>",
     date: new Date('March 19, 2024'),
     startTime: '4 PM',
     endTime: '6 PM',
@@ -53,18 +50,18 @@ export const EVENTS: Event[] = [
   {
     title: 'BUGS Kickoff Event',
     description: 'Get to know your new eBoard through their favorite open source tools!',
-    shortdescription: "This Spring, a new eboard was elected for bugs. Each new member presented their favorite open-source project.",
-    "- Abigal Zhou is the new president of BUGS and studies computer science at CAS. Her favorite open-source project is docker, which helps containerize your applications.",
-    "- Leading BUGS events, Alex Ying is BUGS's new head event coordinator. He studies computer science at Tandon. his favorite open-source project is Dolphin, which is a Wii + Gamecube emulator. it has high compatibility, original hardware supported, and 97.1% of games playable to completion.",
-    "- Alex Jia embraces two roles as the developer and event coordinator for BUGS. He studies computer science and mathematics at CAS. His favorite open source project is ps.ja which is a javascript library for creating coding, with a focus on making coding accessible and inclusive for artists and designers.",
-    "- Riley Dou, BUGS communication and photographer, studies computer science at Tandon. redis is her favorite open-source project, which is an in-memory key-value database, cache, and messenger.",
-    "- Sewon Kim studies computer science at CAS and helped upgrade the BUGS website. He is the BUGS website designer. he enjoys the open-source project react, which is a front-end component-based javascript framework. it has a modern learning curve and was his first web framework.",
-    "- Helping organize BUGS events, Phil Chen is the event coordinator for BUGS. He studies computer science at CAS. Fawkes is his favorite open-source project which is used as a privacy tool, for facial “cloaking”. It helps protect your image online and it is easy to use.",
-    "- Elaine Zou is BUGS's treasurer, and she studies computer science at CAS. Her favorite open-source project is GIT, which has helped to maintain the BUGS website. GIT helps with tracking changes in code and collaboration in creating code.",
-    "- Lawrence Gu helps keep the CS wiki updated as BUGS's CS wiki writer. He is a math and computer science major at CAS. COQ, which is a formal proof management system is his favorite open-source project.",
-    "- Faith Winford is the new website maintainer for BUGS. She studies computer science and philosophy at CAS. TensorFlow, which is an open-source machine learning framework developed by Google Brain for building and training neural networks, is her favorite open-source project.",
-    "- Isha Gopal is the graphic designer for BUGS. She is studying computer science at CAS. Unfortunately, she could not attend the kickoff event.",
-    "After, everyone enjoyed buns from Mei Lai Wah and buns from Wanpo.",
+    shortDescription: `This Spring, a new eboard was elected for bugs. Each new member presented their favorite open-source project. 
+      <br> Abigail Zhou is the new president of BUGS and studies computer science at CAS. Her favorite open-source project is docker, which helps containerize your applications. 
+      <br> Leading BUGS events, Alex Ying is BUGS's new head event coordinator. He studies computer science at Tandon. his favorite open-source project is Dolphin, which is a Wii + Gamecube emulator. it has high compatibility, original hardware supported, and 97.1% of games playable to completion. 
+      <br> Alex Jia embraces two roles as the developer and event coordinator for BUGS. He studies computer science and mathematics at CAS. His favorite open source project is ps.ja which is a javascript library for creating coding, with a focus on making coding accessible and inclusive for artists and designers.
+      <br> Riley Dou, BUGS communication and photographer, studies computer science at Tandon. redis is her favorite open-source project, which is an in-memory key-value database, cache, and messenger.
+      <br> Sewon Kim studies computer science at CAS and helped upgrade the BUGS website. He is the BUGS website designer. he enjoys the open-source project react, which is a front-end component-based javascript framework. it has a modern learning curve and was his first web framework.
+      <br> Helping organize BUGS events, Phil Chen is the event coordinator for BUGS. He studies computer science at CAS. Fawkes is his favorite open-source project which is used as a privacy tool, for facial “cloaking”. It helps protect your image online and it is easy to use.
+      <br> Elaine Zou is BUGS's treasurer, and she studies computer science at CAS. Her favorite open-source project is GIT, which has helped to maintain the BUGS website. GIT helps with tracking changes in code and collaboration in creating code.
+      <br> Lawrence Gu helps keep the CS wiki updated as BUGS's CS wiki writer. He is a math and computer science major at CAS. COQ, which is a formal proof management system is his favorite open-source project.
+      <br> Faith Winford is the new website maintainer for BUGS. She studies computer science and philosophy at CAS. TensorFlow, which is an open-source machine learning framework developed by Google Brain for building and training neural networks, is her favorite open-source project.
+      <br> Isha Gopal is the graphic designer for BUGS. She is studying computer science at CAS. Unfortunately, she could not attend the kickoff event.
+      <br> After, everyone enjoyed buns from Mei Lai Wah and buns from Wanpo.`,
     date: new Date('February 9, 2024'),
     startTime: '5 PM',
     endTime: '6 PM',
