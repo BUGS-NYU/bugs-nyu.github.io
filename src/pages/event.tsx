@@ -17,7 +17,9 @@ const EventsPage: React.FC<PageProps> = ({ location }) => {
     // get event data
     const event = EVENTS[index];
 
-    if (!event.imgsList) {
+    /* If imgsList or shortDescription is defined, this event will have its own page */
+    const hasOwnPage = event.imgsList || event.shortDescription;
+    if (!hasOwnPage) {
         return <Layout> <h1> Error: Invalid event - images not found </h1> </Layout>;
     }
 
@@ -37,16 +39,30 @@ const EventsPage: React.FC<PageProps> = ({ location }) => {
                     </li>
                 </ul>
 
-                <p className="mb-5"> {event.description} </p>
+                {/* Description */}
+                <p className="mb-5"> {event.shortDescription ?? event.description} </p>
 
+                {/* Links */}
+                {event.links && event.links.length > 0 ?
+                <ul className="mb-4">
+                    {event.links.map((link, linkIndex) => 
+                    <li key={linkIndex}>
+                        - <a href={link.url} className='text-lg text-blue-500 hover:underline'> {link.name} </a>
+                    </li>)}
+                </ul> : null}
+
+                {/* Images */}           
+                {event.imgsList && event.imgsList.length > 0 ? 
                 <Slider>
                     {event.imgsList.map((imgSrc, imgIndex) => 
                     <img
                         src={imgSrc}
+                        alt={event.imgsText ? event.imgsText[imgIndex] ?? "" : ""}
+                        title={event.imgsText ? event.imgsText[imgIndex] ?? "" : ""}
                         width="100%" height="auto"
                         key={imgIndex}
                     />)}
-                </Slider>
+                </Slider> : null}
             </div>
         </Layout>
     );

@@ -1,7 +1,13 @@
+export interface Link {
+  name: string;
+  url: string;
+}
+
 export interface Event {
   title: string;
   description: string;
   shortDescription?: string;
+  links?: Link[];
   date: Date;
   startTime: string;
   endTime: string;
@@ -16,7 +22,13 @@ export const EVENTS: Event[] = [
   {
     title: 'BUGS x Girls Who Code SQL Workshop',
     description: 'learn about the basics of SQL query and create an employee check-in system! free food, drinks, and database knowledge',
-    shortDescription: "BUGS collaborated with Girls Who Code to host a workshop on SQL (Structure Query Language). Girls Who Code led the workshop as everyone created their own mini queries with CRUD operations. SQL is a language used for relational database management. It helps with data manipulation, data definition, and data control. Everyone enjoyed buns from Mei Lai Wah.<br>Link to slides: <a href='https://docs.google.com/presentation/d/1QWiyGfHQuIhohpCukL8Fi_YWNK4MhjS-5OCRb_1eQxo/edit?usp=sharing'> Slides </a>",
+    shortDescription: "BUGS collaborated with Girls Who Code to host a workshop on SQL (Structure Query Language). Girls Who Code led the workshop as everyone created their own mini queries with CRUD operations. SQL is a language used for relational database management. It helps with data manipulation, data definition, and data control. Everyone enjoyed buns from Mei Lai Wah.\nLink to slides:",
+    links: [
+      {
+        name: "Slides",
+        url: "https://docs.google.com/presentation/d/1QWiyGfHQuIhohpCukL8Fi_YWNK4MhjS-5OCRb_1eQxo/edit?usp=sharing"
+      }
+    ],
     date: new Date('April 19, 2024'),
     startTime: '5 PM',
     endTime: '6:30 PM',
@@ -26,7 +38,13 @@ export const EVENTS: Event[] = [
   {
     title: 'BUGS x Google',
     description: 'learn about open source security and AI from a Google staff engineer!',
-    shortDescription: "Johnathon Metzam, a security engineer at Google shared his insights on open-source security and applying AI to security. He also shared some of his contributions to FuzzBench, a service that evaluates fuzz testing tools on a Google scale. Helpful links: <a href='https://github.com/jonathanmetzman'> Github </a> <a href='https://github.com/AnubisLMS'> </a>",
+    shortDescription: "Johnathon Metzam, a security engineer at Google shared his insights on open-source security and applying AI to security. He also shared some of his contributions to FuzzBench, a service that evaluates fuzz testing tools on a Google scale. Helpful links:",
+    links: [
+      {
+        name: "Github",
+        url: "https://github.com/jonathanmetzman"
+      }
+    ],
     date: new Date('March 19, 2024'),
     startTime: '4 PM',
     endTime: '6 PM',
@@ -95,6 +113,12 @@ export const EVENTS: Event[] = [
   {
     title: 'BUGS x Anubis',
     description: 'meet with the founder of Anubis, John Cuniff, to learn more about the role of OpenSource!',
+    links: [
+      {
+        name: "AnubisLMS",
+        url: "https://github.com/AnubisLMS"
+      }
+    ],
     date: new Date('February 23, 2024'),
     startTime: '5 PM',
     endTime: '6:30 PM',
