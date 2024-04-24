@@ -132,6 +132,14 @@ export const EVENTS: Event[] = [
     '/images/events-pictures/anubis/6.jpg',
     '/images/events-pictures/anubis/7.jpg'
     ],
+    imgsText: ['John Cuniff presenting about Anubis',
+    'John Cuniff giving a presentation up front',
+    'The audience for the presentation',
+    'The audience for the presentation',
+    'The dumplings from Vanessa\'s Dumplings',
+    'Group of people interacting after the presentation',
+    'Aneesh.'
+    ],
   },
   {
     title: 'Tech Fest',
