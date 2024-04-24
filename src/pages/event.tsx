@@ -51,9 +51,9 @@ const EventsPage: React.FC<PageProps> = ({ location }) => {
                     </li>)}
                 </ul> : null}
 
-                {/* Images */}           
+                {/* Images */}
                 {event.imgsList && event.imgsList.length > 0 ? 
-                <Slider>
+                <Slider elementStyle={"flex items-center overflow-hidden h-44 sm:h-96 md:h-30rem"}>
                     {event.imgsList.map((imgSrc, imgIndex) => 
                     <img
                         src={imgSrc}

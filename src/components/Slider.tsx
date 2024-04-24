@@ -3,9 +3,10 @@ import { NavArrowLeft, NavArrowRight } from 'iconoir-react';
 
 type SliderProps = {
     children: React.ReactNode[];
+    elementStyle: Object;
 }
 
-function Slider({ children }: SliderProps) {
+function Slider({ children, elementStyle }: SliderProps) {
     const [sliderIndex, setSliderIndex] = useState(0);
 
     return (<div className="overflow-hidden relative rounded-xl">
@@ -15,7 +16,7 @@ function Slider({ children }: SliderProps) {
                 transform: `translateX(-${sliderIndex * 100}%)`,
             }}>
             {children.map((element, elementIndex) => 
-                <div className="flex-none w-full bg-orange-900" key={elementIndex}>
+                <div className={`flex-none w-full bg-orange-900 ${elementStyle}`} key={elementIndex}>
                     {element}
                 </div>
             )}
