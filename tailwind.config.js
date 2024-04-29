@@ -7,6 +7,9 @@ module.exports = {
       transitionProperty: {
         height: 'height',
       },
+      height: {
+        "30rem": "30rem"
+      }
     },
   },
   plugins: [],
