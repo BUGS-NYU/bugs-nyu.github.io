@@ -20,9 +20,27 @@ export interface Event {
 
 export const EVENTS: Event[] = [
   {
+    title: "End of Semester Party",
+    description: "Join BUGS at our end of semester party! Relax with boba and food before finals week :)",
+    date: new Date('May 5, 2024'),
+    startTime: '5:00 PM',
+    endTime: '6:30 PM',
+    location: 'WWH Room 101',
+    cover: '/images/events/2023_2024/bugs_end_of_semester.png',
+  },
+  {
+    title: 'BUGS x Google | Life of a Feature',
+    description: 'Kristen Engel, a backend engineer, will discuss the design and development life cycle for creating new features for large projects.',
+    date: new Date('April 26, 2024'),
+    startTime: '3:30 PM',
+    endTime: '5:00 PM',
+    location: 'WWH Room 101',
+    cover: '/images/events/2023_2024/bugsxgoogle_life_of_a_feature.png',
+  },
+  {
     title: 'BUGS x Girls Who Code SQL Workshop',
     description: 'learn about the basics of SQL query and create an employee check-in system! free food, drinks, and database knowledge',
-    shortDescription: "BUGS collaborated with Girls Who Code to host a workshop on SQL (Structure Query Language). Girls Who Code led the workshop as everyone created their own mini queries with CRUD operations. SQL is a language used for relational database management. It helps with data manipulation, data definition, and data control. Everyone enjoyed buns from Mei Lai Wah.",
+    shortDescription: "BUGS collaborated with Girls Who Code to host a workshop on SQL (Structure Query Language). Shreya Choudhary led the workshop as everyone created their own mini queries with CRUD operations. SQL is a language used for relational database management. It helps with data manipulation, data definition, and data control. Everyone enjoyed buns from Mei Lai Wah.",
     links: [
       {
         name: "Slides",
@@ -33,7 +51,7 @@ export const EVENTS: Event[] = [
     startTime: '5 PM',
     endTime: '6:30 PM',
     location: 'WWH Room 101',
-    cover: '/images/events/bugs_x_girls_who_code.png',
+    cover: '/images/events/2023_2024/bugs_x_girls_who_code.png',
   },
   {
     title: 'BUGS x Google',
@@ -49,7 +67,7 @@ export const EVENTS: Event[] = [
     startTime: '4 PM',
     endTime: '6 PM',
     location: 'WWH Room 101',
-    cover: '/images/events/bugssxgoogle.jpg',
+    cover: '/images/events/2023_2024/bugssxgoogle.jpg',
     imgsList: ['/images/events-pictures/google/1.jpg',
     '/images/events-pictures/google/2.jpg',
     '/images/events-pictures/google/3.jpg',
@@ -68,23 +86,23 @@ export const EVENTS: Event[] = [
   {
     title: 'BUGS Kickoff Event',
     description: 'Get to know your new eBoard through their favorite open source tools!',
-    shortDescription: `This Spring, a new eboard was elected for bugs. Each new member presented their favorite open-source project. 
-      Abigail Zhou is the new president of BUGS and studies computer science at CAS. Her favorite open-source project is docker, which helps containerize your applications. 
-      Leading BUGS events, Alex Ying is BUGS's new head event coordinator. He studies computer science at Tandon. his favorite open-source project is Dolphin, which is a Wii + Gamecube emulator. it has high compatibility, original hardware supported, and 97.1% of games playable to completion. 
-      Alex Jia embraces two roles as the developer and event coordinator for BUGS. He studies computer science and mathematics at CAS. His favorite open source project is ps.ja which is a javascript library for creating coding, with a focus on making coding accessible and inclusive for artists and designers. 
-      Riley Dou, BUGS communication and photographer, studies computer science at Tandon. redis is her favorite open-source project, which is an in-memory key-value database, cache, and messenger. 
-      Sewon Kim studies computer science at CAS and helped upgrade the BUGS website. He is the BUGS website designer. he enjoys the open-source project react, which is a front-end component-based javascript framework. it has a modern learning curve and was his first web framework. 
-      Helping organize BUGS events, Phil Chen is the event coordinator for BUGS. He studies computer science at CAS. Fawkes is his favorite open-source project which is used as a privacy tool, for facial “cloaking”. It helps protect your image online and it is easy to use. 
-      Elaine Zou is BUGS's treasurer, and she studies computer science at CAS. Her favorite open-source project is GIT, which has helped to maintain the BUGS website. GIT helps with tracking changes in code and collaboration in creating code. 
-      Lawrence Gu helps keep the CS wiki updated as BUGS's CS wiki writer. He is a math and computer science major at CAS. COQ, which is a formal proof management system is his favorite open-source project. 
-      Faith Winford is the new website maintainer for BUGS. She studies computer science and philosophy at CAS. TensorFlow, which is an open-source machine learning framework developed by Google Brain for building and training neural networks, is her favorite open-source project. 
-      Isha Gopal is the graphic designer for BUGS. She is studying computer science at CAS. Unfortunately, she could not attend the kickoff event.
+    shortDescription: `This Spring, a new eboard was elected for bugs. Each new member presented their favorite open-source project. \n
+      Abigail Zhou is the new president of BUGS and studies computer science at CAS. Her favorite open-source project is docker, which helps containerize your applications. \n
+      Leading BUGS events, Alex Ying is BUGS's new head event coordinator. He studies computer science at Tandon. his favorite open-source project is Dolphin, which is a Wii + Gamecube emulator. it has high compatibility, original hardware supported, and 97.1% of games playable to completion. \n
+      Alex Jia embraces two roles as the developer and event coordinator for BUGS. He studies computer science and mathematics at CAS. His favorite open source project is ps.ja which is a javascript library for creating coding, with a focus on making coding accessible and inclusive for artists and designers. \n
+      Riley Dou, BUGS communication and photographer, studies computer science at Tandon. redis is her favorite open-source project, which is an in-memory key-value database, cache, and messenger. \n
+      Sewon Kim studies computer science at CAS and helped upgrade the BUGS website. He is the BUGS website designer. he enjoys the open-source project react, which is a front-end component-based javascript framework. it has a modern learning curve and was his first web framework. \n
+      Helping organize BUGS events, Phil Chen is the event coordinator for BUGS. He studies computer science at CAS. Fawkes is his favorite open-source project which is used as a privacy tool, for facial “cloaking”. It helps protect your image online and it is easy to use. \n
+      Elaine Zou is BUGS's treasurer, and she studies computer science at CAS. Her favorite open-source project is GIT, which has helped to maintain the BUGS website. GIT helps with tracking changes in code and collaboration in creating code. \n
+      Lawrence Gu helps keep the CS wiki updated as BUGS's CS wiki writer. He is a math and computer science major at CAS. COQ, which is a formal proof management system is his favorite open-source project. \n
+      Faith Winford is the new website maintainer for BUGS. She studies computer science and philosophy at CAS. TensorFlow, which is an open-source machine learning framework developed by Google Brain for building and training neural networks, is her favorite open-source project. \n
+      Isha Gopal is the graphic designer for BUGS. She is studying computer science at CAS. Unfortunately, she could not attend the kickoff event. \n
       Afterwards, everyone enjoyed buns from Mei Lai Wah and boba from Wanpo.`,
     date: new Date('February 9, 2024'),
     startTime: '5 PM',
     endTime: '6 PM',
     location: 'WWH Room 101',
-    cover: '/images/events/bugs.jpg',
+    cover: '/images/events/2023_2024/kickoffevent.jpg',
     imgsList :['/images/events-pictures/kickoff/1.jpg',
       '/images/events-pictures/kickoff/2.jpg',
       '/images/events-pictures/kickoff/3.jpg',
@@ -123,7 +141,7 @@ export const EVENTS: Event[] = [
     startTime: '5 PM',
     endTime: '6:30 PM',
     location: 'WWH Room 101',
-    cover: '/images/events/anubis.jpg',
+    cover: '/images/events/2023_2024/anubis.jpg',
     imgsList: ['/images/events-pictures/anubis/1.jpg',
     '/images/events-pictures/anubis/2.jpg',
     '/images/events-pictures/anubis/3.jpg',
@@ -148,7 +166,7 @@ export const EVENTS: Event[] = [
     startTime: '5:30 PM',
     endTime: '7 PM',
     location: 'Kimmel Center, Eisner & Lubin Auditorium',
-    cover: '/images/events/techfest1.jpg',
+    cover: '/images/events/2023_2024/techfest1.jpg',
     imgsList: ['/images/events-pictures/techfest/1.jpg',
       '/images/events-pictures/techfest/2.jpg',
       '/images/events-pictures/techfest/3.jpg',
