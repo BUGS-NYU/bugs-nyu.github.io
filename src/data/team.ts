@@ -10,7 +10,7 @@ export const TEAM: TeamMember[] = [
     name: 'Abigail Zhou',
     description:
       'Abigail is a senior majoring in CS at CAS with an interest in operating systems and machine learning. She\'s currently exploring the finance industry and enjoys trying new restaurants and running in her free time!!',
-    profileImg: '/images/team/abigal.jpg',
+    profileImg: '/images/team/abigal.jpeg',
     role: 'President',
   },
   {
@@ -24,7 +24,7 @@ export const TEAM: TeamMember[] = [
     name: 'Rishabh Verma',
     description:
       'Rishabh is a 2nd year MS CS student at NYU Tandon. In his free time, he likes to learn more about financial markets, algorithmic trading strategies, and system design.',
-    profileImg: '/images/team/rishabh.jpg',
+    profileImg: '/images/team/rishabh.jpeg',
     role: 'Lead Developer',
   },
   {
@@ -83,7 +83,7 @@ export const TEAM: TeamMember[] = [
   {
     name: 'Boyoon Han',
     description: 'Boyoon is a senior studying Data Science and Math at CAS. In her free time, she likes cafe-hopping, trying out new restaurants, and photography.',
-    profileImg: '/images/team/bo.jpg',
+    profileImg: '/images/team/boyoon.jpg',
     role: 'CS Wiki Writer',
   },
   {
