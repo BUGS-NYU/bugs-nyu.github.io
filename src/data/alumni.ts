@@ -6,10 +6,41 @@ export interface Alumni {
 
 export const ALUMNI: Alumni[] = [
   {
+    name: 'Joshua Le',
+    graduation: 2025,
+    description: 'Joshua was former BUGS Project Lead. Joshua is a third-year undergraduate at CAS studying CS. He’s interested in everything: Software Engineering and UI/UX. Outside of school and work, he enjoys playing chess.',
+  },
+  {
+    name: 'David Mo',
+    graduation: 2025,
+    description: 'David was former BUGS Event Coordinator. David is a junior studying CS at CAS. He’s New York born and raised and is interested in the intersection between programming and design.',
+  },
+  {
+    name: 'Julius Nedzinskas',
+    graduation: 2023,
+    description: 'Julius was former BUGS Project Lead. Julius graduated NYU in 2023, and is currently a graduate student studying Computing, Entrepreneurship and Innovation; he enjoys various competitive sports like basketball and table tennis, he also enjoys New York’s pizza and cultural life offerings.',
+  },
+  {
+  name: 'Laurel Xiang',
+  graduation: 2024,
+  description: 'Laurel was former BUGS Treasurer. She a senior studying CS and DS at CAS. In her free time, she enjoy cycling, climbing, and contributing to projects.',
+  },
+  {
+    name: 'Calvin Tian',
+    graduation: 2024,
+    description: 'Calvin was former BUGS Project Lead. He is a senior studying CS at Tandon. Born in California, he enjoys automation and cats 😺!',
+  },
+  {
+    name: 'Aneesh Maganti',
+    graduation: 2024,
+    description:
+      'Aneesh was former BUGS President. He is a senior studying CS at Tandon. He really enjoys contributing to and playing with emulators, rock climbing, and occasionally doing music production 🦔.',
+  },
+  {
     name: 'Khanh Nguyen',
     graduation: 2022,
     description:
-      'Khanh is from Vietnam and studied Computer Science. BROCKHAMPTON is his all-time favorite boyband. Outside of school, he enjoys trying out good food, exploring the city and contributing to projects. Khanh was the former president.',
+      'Khanh was the former BUGS president. Khanh is from Vietnam and studied Computer Science. BROCKHAMPTON is his all-time favorite boyband. Outside of school, he enjoys trying out good food, exploring the city and contributing to projects.',
   },
   {
     name: 'Aaditya Mehta',
@@ -21,11 +52,11 @@ export const ALUMNI: Alumni[] = [
     name: 'Sonia Jain',
     graduation: 2022,
     description:
-      "Sonia double majored in Computer Science and Media, Culture, and Communications. She is interested in game design, art, and I love animals. In her free time, Sonia works with a variety of organizations to help find dogs and cats' homes. She also loves painting and digital art so when she is not working with animals, she is creating. Sonia was the former director of marketing & communications.",
+      "Sonia double majored in Computer Science and Media, Culture, and Communications. She is interested in game design, art, and loves animals. In her free time, Sonia works with a variety of organizations to help find dogs and cats' homes. She also loves painting and digital art so when she is not working with animals, she is creating. Sonia was the former director of marketing & communications.",
   },
   {
     name: 'Bruce Jiang',
-    graduation: 0,
+    graduation: 2022,
     description:
       'Bruce is from China and studied Computer Science and Mathematics. Outside of class, he is crazy in soccer (especially in Chelsea) and basketball. He spends tons of time playing FIFA (most of the time playing Chelsea). Besides, he likes listening to music, reading about history, and travelling. Bruce was the former secretary.',
   },
@@ -79,7 +110,7 @@ export const ALUMNI: Alumni[] = [
   },
   {
     name: 'Shelly Cao',
-    graduation: 0,
+    graduation: 2021,
     description:
       "Shelly Cao was BUGS' Director of Outreach in 2019 and majored in Computer Science with minors in Math and Business Study. She comes from a small city in China called Jingzhou and even her Chinese friends are clueless as to where it is. In her free time, she loves to explore the different boroughs in the city and try food from different cultures.",
   },

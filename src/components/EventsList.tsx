@@ -8,7 +8,7 @@ interface EventsListProps {
   count?: number;
 }
 
-const getDateText = (event: Event) => {
+export const getDateText = (event: Event) => {
   const day = Intl.DateTimeFormat(undefined, {
     month: 'long',
     day: 'numeric',
@@ -25,12 +25,20 @@ const EventsList = ({ events, count }: EventsListProps) => {
   return (
     <>
       <div className='grid gap-12 grid-cols-1 sm:grid-cols-2'>
-        {events.map((event) => (
-          <Card shadow='none' key={event.title}>
+        {events.map((event) => {
+          /* If imgsList or shortDescription is defined, this event will have its own page */
+          const hasOwnPage = event.imgsList || event.shortDescription;
+
+          return <Card shadow='none' 
+              link={hasOwnPage ? `/event?index=${event.eventIndex}` : undefined} 
+              key={event.title}>
             <div className='-m-8 mb-0'>
               <img className='w-full h-48 rounded-t-lg object-cover' src={event.cover} alt='' />
             </div>
-            <h3 className='mt-6 text-xl font-bold'>{event.title}</h3>
+            <div className='flex justify-between items-center p-2 pt-3'> 
+              <h3 className='text-xl font-bold'>{event.title}</h3> 
+              {hasOwnPage ? <div className='group-hover:bg-neutral-600 border-2 px-3 py-2 text-lg rounded-md transition-colors'> View </div> : null}
+            </div>
             <ul className='text-zinc-600 dark:text-zinc-400'>
               <li className='my-2 flex gap-x-2'>
                 <Clock className='flex-shrink-0 inline-block' />
@@ -43,7 +51,7 @@ const EventsList = ({ events, count }: EventsListProps) => {
             </ul>
             <p className='mt-4'>{event.description}</p>
           </Card>
-        ))}
+        })}
       </div>
     </>
   );
