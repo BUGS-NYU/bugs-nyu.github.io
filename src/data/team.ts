@@ -88,7 +88,7 @@ export const TEAM: TeamMember[] = [
   },
   {
     name: 'Faith Winford',
-    description: 'Faith Winford is a freshman studying CS and Philosophy at CAS. She’s interested in the intersection of AI and ethics. In her free time, she likes listening to music and going to concerts.',
+    description: 'Faith Winford is a sophomore studying CS and Philosophy at CAS. She’s interested in the intersection of AI and ethics. In her free time, she likes listening to music and going to concerts.',
     profileImg: '/images/team/faith.jpg',
     role: 'Website Maintainer',
   },
