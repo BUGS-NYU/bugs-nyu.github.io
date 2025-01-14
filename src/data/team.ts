@@ -83,7 +83,7 @@ export const TEAM: TeamMember[] = [
   {
     name: 'Boyoon Han',
     description: 'Boyoon is a senior studying Data Science and Math at CAS. In her free time, she likes cafe-hopping, trying out new restaurants, and photography.',
-    profileImg: '/images/team/bo.jpg',
+    profileImg: '/images/team/boyoon.jpg',
     role: 'CS Wiki Writer',
   },
   {
