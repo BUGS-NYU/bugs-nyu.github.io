@@ -3,36 +3,40 @@ export interface TeamMember {
   description: string;
   profileImg: string;
   role: string;
+  interests?: string[];
 }
 
 export const TEAM: TeamMember[] = [
   {
     name: 'Abigail Zhou',
     description:
-      'Abigail is a senior majoring in CS at CAS with an interest in operating systems and machine learning. She\'s currently exploring the finance industry and enjoys trying new restaurants and running in her free time!!',
+      'Abigail is a senior majoring in CS at CAS. She enjoys trying new restaurants and running in her free time!',
     profileImg: '/images/team/abigal.jpg',
     role: 'President',
+    interests: ["Operating Systems", "Machine Learning", "Finance"]
   },
   {
     name: 'Alex Ying',
     description:
-      'Alex is a senior studying CS at Tandon. He enjoys skiing, rock climbing, doing escape rooms, and learning about cool algorithms in his free time. He is currently learning how to juggle.',
+      'Alex is a senior studying CS at Tandon. He enjoys skiing, rock climbing, doing escape rooms in his free time. He is currently learning how to juggle.',
     profileImg: '/images/team/alexyi.jpg',
     role: 'Lead Event Coordinator',
+    interests: ["Cool Algorithms"]
   },
    {
     name: 'Rishabh Verma',
     description:
-      'Rishabh is a 2nd year MS CS student at NYU Tandon. In his free time, he likes to learn more about financial markets, algorithmic trading strategies, and system design.',
+      'Rishabh is a 2nd year MS CS student at NYU Tandon. In his free time, he likes to learn more about algorithmic trading strategies',
     profileImg: '/images/team/rishabh.jpg',
     role: 'Lead Developer',
+    interests: ["Financial Markets", "Systems Design"]
   },
   {
-    name: 'Alex Jia',
-    description:
-      'Hello everyone my name is Alex, I am a Sophomore who is majoring in computer science and mathematics at CAS. I was born in Xi’an and raised in Seattle, and I am interested in the intersection between image processing and machine learning. In my free time, I love hanging out with friends and discovering local restaurants with Beli!',
-    profileImg: '/images/team/alexj.jpg',
-    role: 'Developer',
+    name: "Alex Jia",
+    description: "Alex, a Sophomore majoring in computer science and mathematics at NYU CAS, explores the intersection of image processing and machine learning. Outside of academics, Alex enjoys discovering local restaurants and spending time with friends.",
+    profileImg: "/images/team/alexj.jpg",
+    role: "Developer",
+    interests: ["Image Processing", "Machine Learning"]
   },
   {
     name: 'Grace He',
@@ -44,9 +48,10 @@ export const TEAM: TeamMember[] = [
   {
     name: 'Aryan Rai',
     description: 
-      'Aryan is a second-year master\'s student in CS at Tandon with a strong interest in machine learning and finance. He’s currently exploring the intersection of artificial intelligence and financial technology, focusing on how AI can transform the finance industry. In his free time, Aryan enjoys trekking, playing badminton, and seeking out new experiences around New York.',
+      'Aryan is a second-year master\'s student in CS at Tandon. He’s currently exploring the intersection of artificial intelligence and financial technology, focusing on how AI can transform the finance industry. In his free time, Aryan enjoys trekking, playing badminton, and seeking out new experiences around New York.',
     profileImg: '/images/team/aryan.jpg',
     role: 'Event Coordinator',
+    interests: ["Finance", "Machine Learning"]
   },
   {
     name: 'Angela Liu',
@@ -88,9 +93,10 @@ export const TEAM: TeamMember[] = [
   },
   {
     name: 'Faith Winford',
-    description: 'Faith Winford is a sophomore studying CS and Philosophy at CAS. She’s interested in the intersection of AI and ethics. In her free time, she likes listening to music and going to concerts.',
+    description: 'Faith Winford is a sophomore studying CS and Philosophy at CAS. In her free time, she likes listening to music and going to concerts.',
     profileImg: '/images/team/faith.jpg',
     role: 'Website Maintainer',
+    interests: ["AI", "Product Managment","Software Design"]
   },
 
 ];

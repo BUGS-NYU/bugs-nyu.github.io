@@ -20,6 +20,33 @@ export interface Event {
 
 export const EVENTS: Event[] = [
   {
+    title: 'Bugs x HRT',
+    description: 'learn about the role of open source in the financial sector from kamen yotov, a tandon professor.',
+    date: new Date('September 24, 2024'),
+    startTime: '5:00 PM',
+    endTime: '6:30 PM',
+    location: 'WWH Room 101',
+    cover: '/images/events/fall-2024/bugs_HRT.png',
+  },
+  {
+    title: 'Bugs End of Semester Party',
+    description: 'join us at our end of semester party and relax with some boba before finals week',
+    date: new Date('May 3, 2024'),
+    startTime: '5:00 PM',
+    endTime: '6:00 PM',
+    location: 'WWH Room 101',
+    cover: '/images/events/end_of_semester_bugs.png',
+  },
+  {
+    title: 'Bugs x Google Life of a Feature',
+    description: 'learn about the deisgn and development cycle for creating new features for large projects',
+    date: new Date('April 26, 2024'),
+    startTime: '3:30 PM',
+    endTime: '5:00 PM',
+    location: 'WWH Room 101',
+    cover: '/images/events/bugs_google_life_of_a_feature.png',
+  },
+  {
     title: 'BUGS x Girls Who Code SQL Workshop',
     description: 'learn about the basics of SQL query and create an employee check-in system! free food, drinks, and database knowledge',
     shortDescription: "BUGS collaborated with Girls Who Code to host a workshop on SQL (Structure Query Language). Girls Who Code led the workshop as everyone created their own mini queries with CRUD operations. SQL is a language used for relational database management. It helps with data manipulation, data definition, and data control. Everyone enjoyed buns from Mei Lai Wah.",
