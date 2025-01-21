@@ -41,7 +41,7 @@ function NavBar() {
           <button 
             className={`${currentTheme === "light" ? "text-black" : "text-white"} flex w-10 h-10 items-center justify-center`}
             onClick={toggleMobileMenu}>
-            {isMobileMenuOpen ? <Cancel /> : <Menu />}
+            {isMobileMenuOpen ? <Cancel width={24} height={24} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} /> : <Menu width={24} height={24} onPointerEnterCapture={undefined} onPointerLeaveCapture={undefined} />}
           </button>
         </div>
 

@@ -4,14 +4,41 @@ import Layout from '../components/Layout';
 import Card from '../components/Card';
 import { TEAM, TeamMember } from '../data/team';
 
-const TeamMemberCard: React.FC<TeamMember> = ({ name, description, profileImg, role }) => (
-  <Card shadow='none'  className='flex flex-col items-center'>
+const InterestTag: React.FC<{ interest: string }> = ({ interest }) => (
+  <span className='inline-block px-3 py-1 text-sm rounded-full bg-purple-100 text-[#8900e1] dark:bg-purple-900 dark:text-purple-200 mr-2 mb-2'>
+    {interest}
+  </span>
+);
+
+const TeamMemberCard: React.FC<TeamMember> = ({ 
+  name, 
+  description, 
+  profileImg, 
+  role, 
+  interests = [] 
+}) => (
+  <Card 
+    shadow='none' 
+    className='flex flex-col items-center group transition-transform duration-300 hover:-translate-y-1 p-0'
+  >
     <div className='w-full h-64 overflow-hidden rounded-t-lg'>
-      <img className='w-full h-full object-cover' src={profileImg} alt='' />
+      <img 
+        className='w-full h-full object-cover transition-transform duration-300 group-hover:scale-105' 
+        src={profileImg} 
+        alt={`${name} - ${role}`} 
+        loading="lazy"
+      />
     </div>
-    <h3 className='mt-6 text-xl font-bold'>{name}</h3>
-    <h3 className=' text-xl'>{role}</h3>
-    <p className='mt-2'>{description}</p>
+    <div className='mt-6 px-4 pb-4 w-full'>
+      <h3 className='text-xl font-bold'>{name}</h3>
+      <h3 className='text-xl' style={{ color: '#7b5aa6' }}>{role}</h3>
+      <p className='mt-2 mb-3'>{description}</p>
+      <div className='flex flex-wrap'>
+        {interests.map((interest) => (
+          <InterestTag key={interest} interest={interest} />
+        ))}
+      </div>
+    </div>
   </Card>
 );
 
