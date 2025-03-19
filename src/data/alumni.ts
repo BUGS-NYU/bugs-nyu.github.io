@@ -4,38 +4,41 @@ export interface Alumni {
   description: string;
 }
 
-export const ALUMNI: Alumni[] = [
+export const NEW_ALUMNI: Alumni[] = [
   {
     name: 'Joshua Le',
     graduation: 2025,
-    description: 'Joshua was former BUGS Project Lead. Joshua is a third-year undergraduate at CAS studying CS. He’s interested in everything: Software Engineering and UI/UX. Outside of school and work, he enjoys playing chess.',
+    description: 'Joshua was the former BUGS Project Lead. Joshua studied CS at CAS. He’s interested in everything: Software Engineering and UI/UX. Outside of school and work, he enjoys playing chess.',
   },
   {
     name: 'David Mo',
     graduation: 2025,
-    description: 'David was former BUGS Event Coordinator. David is a junior studying CS at CAS. He’s New York born and raised and is interested in the intersection between programming and design.',
+    description: 'David was the former BUGS Event Coordinator. David studied CS at CAS. He’s New York born and raised and is interested in the intersection between programming and design.',
   },
   {
     name: 'Julius Nedzinskas',
     graduation: 2023,
-    description: 'Julius was former BUGS Project Lead. Julius graduated NYU in 2023, and is currently a graduate student studying Computing, Entrepreneurship and Innovation; he enjoys various competitive sports like basketball and table tennis, he also enjoys New York’s pizza and cultural life offerings.',
+    description: 'Julius was the former BUGS Project Lead. Julius studied CS at CAS and graduated in 2023 and received an MS in Computing, Entrepreneurship and Innovation in 2025; he enjoys various competitive sports like basketball and table tennis, he also enjoys New York’s pizza and cultural life offerings.',
   },
   {
   name: 'Laurel Xiang',
   graduation: 2024,
-  description: 'Laurel was former BUGS Treasurer. She a senior studying CS and DS at CAS. In her free time, she enjoy cycling, climbing, and contributing to projects.',
+  description: 'Laurel was the former BUGS Treasurer. She studied CS and DS at CAS. In her free time, she enjoy cycling, climbing, and contributing to projects.',
   },
   {
     name: 'Calvin Tian',
     graduation: 2024,
-    description: 'Calvin was former BUGS Project Lead. He is a senior studying CS at Tandon. Born in California, he enjoys automation and cats 😺!',
+    description: 'Calvin was the former BUGS Project Lead. He studied CS at Tandon. Born in California, he enjoys automation and cats 😺!',
   },
   {
     name: 'Aneesh Maganti',
     graduation: 2024,
     description:
-      'Aneesh was former BUGS President. He is a senior studying CS at Tandon. He really enjoys contributing to and playing with emulators, rock climbing, and occasionally doing music production 🦔.',
+      'Aneesh was the former BUGS President. He studied CS at Tandon. He really enjoys contributing to and playing with emulators, rock climbing, and occasionally doing music production 🦔.',
   },
+];
+
+export const OLD_ALUMNI: Alumni[] = [
   {
     name: 'Khanh Nguyen',
     graduation: 2022,
